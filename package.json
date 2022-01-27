@@ -1,0 +1,39 @@
+{
+	"name": "@float-toolkit/core",
+	"version": "1.0.0",
+	"description": "Float Toolkit is a Node.js package for working with floating point numbers.",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./typings/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs"
+		}
+	},
+	"scripts": {
+		"build": "npm run format && tsc && gen-esm-wrapper dist dist/index.mjs",
+		"format": "prettier --write ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Float-Toolkit/core.git"
+	},
+	"keywords": [
+		"float",
+		"number",
+		"math",
+		"Node.js"
+	],
+	"author": "LuisFerLCC",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/Float-Toolkit/core/issues"
+	},
+	"homepage": "https://github.com/Float-Toolkit/core#readme",
+	"devDependencies": {
+		"gen-esm-wrapper": "^1.1.3",
+		"prettier": "^2.5.1",
+		"typescript": "^4.5.5"
+	}
+}

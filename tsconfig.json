@@ -1,0 +1,38 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"lib": ["ESNext"],
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"useDefineForClassFields": true,
+
+		"module": "commonjs",
+		"rootDir": "./src/",
+		"moduleResolution": "node",
+
+		"declaration": true,
+		"outDir": "./dist/",
+		"removeComments": true,
+		"noEmitOnError": true,
+		"declarationDir": "./typings/",
+
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+
+		"skipLibCheck": true
+	}
+}
