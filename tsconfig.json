@@ -13,6 +13,7 @@
 		"declaration": true,
 		"outDir": "./dist/",
 		"removeComments": true,
+		"stripInternal": true,
 		"noEmitOnError": true,
 		"declarationDir": "./typings/",
 

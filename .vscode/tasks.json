@@ -12,15 +12,15 @@
 			}
 		},
 		{
-			"label": "TypeScript: Compile",
-			"type": "npm",
-			"script": "build"
-		},
-		{
 			"label": "Prettier: Pretty-print...",
 			"type": "shell",
 			"command": "prettier --write ${input:files}",
 			"problemMatcher": []
+		},
+		{
+			"label": "NPM: Build",
+			"type": "npm",
+			"script": "build"
 		},
 		{
 			"label": "NPM: Install dependencies",

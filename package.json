@@ -12,7 +12,7 @@
 		}
 	},
 	"scripts": {
-		"build": "npm run format && tsc && gen-esm-wrapper dist dist/index.mjs",
+		"build": "rm -rf dist typings && npm run format && tsc && gen-esm-wrapper dist dist/index.mjs",
 		"format": "prettier --write ."
 	},
 	"repository": {
