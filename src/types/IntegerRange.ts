@@ -3,4 +3,4 @@ type EnumerateInternal<A extends Array<unknown>, N extends number> = { 0: A; 1: 
 type Enumerate<N extends number> = EnumerateInternal<[], N> extends (infer E)[] ? E : never;
 type IntegerRange<FROM extends number, TO extends number> = Exclude<Enumerate<TO>, Enumerate<FROM>>;
 
-export default IntegerRange;
+export type FloatToolkitPrecisionInteger = IntegerRange<1, 18>;
