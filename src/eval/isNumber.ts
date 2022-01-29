@@ -1,4 +1,4 @@
 /**
  * @internal
  */
-export const isNumber = (n: number) => typeof n === "number" && !isNaN(n);
+export const isNumber: (n: number) => boolean = (n) => typeof n === "number";
