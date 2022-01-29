@@ -1,6 +1,7 @@
 import { FloatToolkitPrecisionInteger } from "./types/IntegerRange";
 import { FloatToolkitOptions } from "./interfaces/FloatToolkitOptions";
 
+import { defaultOptions } from "./defaultOptions";
 import { isValidPrecisionInteger } from "./eval/isValidPrecisionInteger";
 import { precisionRange } from "./precisionRange";
 import { round } from "./functions/round";
@@ -8,13 +9,13 @@ import { add } from "./functions/add";
 import { subtract } from "./functions/subtract";
 
 class FloatToolkit {
-	constructor(defaultPrecision: FloatToolkitPrecisionInteger = 14, options?: FloatToolkitOptions) {
+	constructor(defaultPrecision: FloatToolkitPrecisionInteger = 14, options: FloatToolkitOptions = {}) {
 		this.defaultPrecision = defaultPrecision;
-		this.options = options;
+		this.options = Object.freeze({ ...defaultOptions, ...options });
 	}
 
 	#precision: FloatToolkitPrecisionInteger = 14;
-	options?: FloatToolkitOptions;
+	readonly options: FloatToolkitOptions;
 
 	get defaultPrecision(): FloatToolkitPrecisionInteger {
 		return this.#precision;
@@ -28,7 +29,7 @@ class FloatToolkit {
 	}
 
 	#choosePrecision(precisionParam?: FloatToolkitPrecisionInteger): FloatToolkitPrecisionInteger | undefined {
-		if (!precisionParam && this.options?.forceUseDefaultPrecision) return this.defaultPrecision;
+		if (!precisionParam && this.options.forceUseDefaultPrecision) return this.defaultPrecision;
 
 		return precisionParam;
 	}
