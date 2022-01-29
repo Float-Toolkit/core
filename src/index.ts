@@ -11,11 +11,11 @@ import { subtract } from "./functions/subtract";
 class FloatToolkit {
 	constructor(defaultPrecision: FloatToolkitPrecisionInteger = 14, options: FloatToolkitOptions = {}) {
 		this.defaultPrecision = defaultPrecision;
-		this.options = Object.freeze({ ...defaultOptions, ...options });
+		this.resetOptions(options);
 	}
 
 	#precision: FloatToolkitPrecisionInteger = 14;
-	readonly options: FloatToolkitOptions;
+	#options: FloatToolkitOptions = {};
 
 	get defaultPrecision(): FloatToolkitPrecisionInteger {
 		return this.#precision;
@@ -26,6 +26,14 @@ class FloatToolkit {
 			throw new TypeError(`defaultPrecision must be an integer between ${precisionRange.min} and ${precisionRange.max - 1}.`);
 
 		this.#precision = precision;
+	}
+
+	get options(): FloatToolkitOptions {
+		return this.#options;
+	}
+
+	resetOptions(newOptions: FloatToolkitOptions): void {
+		this.#options = { ...defaultOptions, ...newOptions };
 	}
 
 	#choosePrecision(precisionParam?: FloatToolkitPrecisionInteger): FloatToolkitPrecisionInteger | undefined {
