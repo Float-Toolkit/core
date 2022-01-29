@@ -4,7 +4,8 @@ import { FloatToolkitOptions } from "./interfaces/FloatToolkitOptions";
 import { isValidPrecisionInteger } from "./eval/isValidPrecisionInteger";
 import { precisionRange } from "./precisionRange";
 import { round } from "./functions/round";
-import { sum } from "./functions/sum";
+import { add } from "./functions/add";
+import { subtract } from "./functions/subtract";
 
 class FloatToolkit {
 	constructor(defaultPrecision: FloatToolkitPrecisionInteger = 14, options?: FloatToolkitOptions) {
@@ -26,14 +27,26 @@ class FloatToolkit {
 		this.#precision = precision;
 	}
 
+	#choosePrecision(precisionParam?: FloatToolkitPrecisionInteger): FloatToolkitPrecisionInteger | undefined {
+		if (!precisionParam && this.options?.forceUseDefaultPrecision) return this.defaultPrecision;
+
+		return precisionParam;
+	}
+
 	round(n: number, precision = this.defaultPrecision): number {
 		return round(n, precision);
 	}
 
-	sum(numbers: number[], precision?: FloatToolkitPrecisionInteger): number {
-		if (this.options?.forceUseDefaultPrecision) precision = this.defaultPrecision;
+	add(numbers: number[], precision?: FloatToolkitPrecisionInteger): number {
+		precision = this.#choosePrecision(precision);
 
-		return sum(numbers, precision);
+		return add(numbers, precision);
+	}
+
+	subtract(numbers: number[], precision?: FloatToolkitPrecisionInteger): number {
+		precision = this.#choosePrecision(precision);
+
+		return subtract(numbers, precision);
 	}
 }
 
