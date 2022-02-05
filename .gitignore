@@ -1,9 +1,10 @@
 # dependencies
 /node_modules
 
-# production
+# production and docs
 /dist
 /typings
+/docs
 
 # IDEs and editors
 /.idea

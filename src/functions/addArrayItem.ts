@@ -1,4 +1,4 @@
-import { FloatToolkitPrecisionInteger } from "../types/IntegerRange";
+import { FloatToolkitPrecisionInteger } from "../types";
 
 import { isNumber } from "../eval/isNumber";
 import { getMaxPrecision } from "../get-precision/getMaxPrecision";

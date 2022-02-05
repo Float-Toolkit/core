@@ -1,6 +1,7 @@
 # dependencies
 /node_modules
 
-# production
+# production and docs
 /dist
 /typings
+/docs

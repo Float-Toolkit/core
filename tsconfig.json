@@ -12,7 +12,6 @@
 
 		"declaration": true,
 		"outDir": "./dist/",
-		"removeComments": true,
 		"stripInternal": true,
 		"noEmitOnError": true,
 		"declarationDir": "./typings/",
@@ -35,5 +34,9 @@
 		"noImplicitOverride": true,
 
 		"skipLibCheck": true
+	},
+	"typedocOptions": {
+		"entryPoints": ["./src/index.ts", "./src/interfaces.ts", "./src/types.ts"],
+		"out": "docs"
 	}
 }

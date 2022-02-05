@@ -1,4 +1,4 @@
-import { FloatToolkitPrecisionInteger } from "../types/IntegerRange";
+import { FloatToolkitPrecisionInteger } from "../types";
 
 import { getPrecision } from "./getPrecision";
 

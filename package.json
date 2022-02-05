@@ -13,7 +13,8 @@
 	},
 	"scripts": {
 		"build": "rm -rf dist typings && npm run format && tsc && gen-esm-wrapper dist dist/index.mjs",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"docs": "npm run format && typedoc"
 	},
 	"repository": {
 		"type": "git",
@@ -34,6 +35,8 @@
 	"devDependencies": {
 		"gen-esm-wrapper": "^1.1.3",
 		"prettier": "^2.5.1",
+		"typedoc": "^0.22.11",
+		"typedoc-plugin-rename-defaults": "^0.4.0",
 		"typescript": "^4.5.5"
 	}
 }

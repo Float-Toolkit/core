@@ -1,4 +1,4 @@
-import { FloatToolkitOptions } from "./interfaces/FloatToolkitOptions";
+import { FloatToolkitOptions } from "./interfaces";
 
 /**
  * @internal

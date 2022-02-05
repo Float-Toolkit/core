@@ -1,8 +1,9 @@
 # dependencies
 /node_modules
 
-# source
+# source and docs
 /src
+/docs
 .gitignore
 
 # IDEs and editors
