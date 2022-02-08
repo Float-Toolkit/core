@@ -12,5 +12,5 @@ export function round(n?: number, precision?: FloatToolkitPrecisionInteger): num
 	if (!isValidPrecisionInteger(precision))
 		throw new RangeError(`Argument for 'precision' must be an integer between ${precisionRange.min} and ${precisionRange.max - 1}.`);
 
-	return Number(n!.toPrecision(precision));
+	return Number(n!.toFixed(precision));
 }

@@ -8,6 +8,7 @@ import { round } from "./functions/round";
 import { add } from "./functions/add";
 import { subtract } from "./functions/subtract";
 import { validateOptions } from "./eval/validateOptions";
+import { multiply } from "./functions/multiply";
 
 /**
  * A FloatToolkit contains methods to round floats and perform accurate math operations with them.
@@ -140,6 +141,12 @@ class FloatToolkit {
 		precision = this.#choosePrecision(precision);
 
 		return subtract(numbers, precision);
+	}
+
+	multiply(numbers: number[], precision?: FloatToolkitPrecisionInteger): number {
+		precision = this.#choosePrecision(precision);
+
+		return multiply(numbers, precision);
 	}
 }
 

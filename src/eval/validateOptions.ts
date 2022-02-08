@@ -1,6 +1,7 @@
+import { FTOptionLabel } from "../types";
+
 import { defaultOptions } from "../defaultOptions";
 import { FTConfigError } from "../errors/FTConfigError";
-import { FTOptionLabel } from "../types";
 
 /**
  * @internal
