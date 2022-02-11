@@ -1,14 +1,15 @@
 import { FloatToolkitPrecisionInteger } from "./types";
 import { FloatToolkitOptions } from "./interfaces";
 
-import { defaultOptions } from "./defaultOptions";
 import { isValidPrecisionInteger } from "./eval/isValidPrecisionInteger";
 import { precisionRange } from "./precisionRange";
+import { validateOptions } from "./eval/validateOptions";
+import { defaultOptions } from "./defaultOptions";
 import { round } from "./functions/round";
 import { add } from "./functions/add";
 import { subtract } from "./functions/subtract";
-import { validateOptions } from "./eval/validateOptions";
 import { multiply } from "./functions/multiply";
+import { divide } from "./functions/divide";
 
 /**
  * A FloatToolkit contains methods to round floats and perform accurate math operations with them.
@@ -148,6 +149,10 @@ class FloatToolkit {
 		precision = this.#choosePrecision(precision);
 
 		return multiply(numbers, precision);
+	}
+
+	divide(numbers: number[], precision = this.defaultPrecision): number {
+		return divide(numbers, precision);
 	}
 }
 

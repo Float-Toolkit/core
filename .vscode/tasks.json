@@ -28,6 +28,11 @@
 			"script": "docs"
 		},
 		{
+			"label": "NPM: Build and generate documentation",
+			"type": "npm",
+			"script": "buildWithDocs"
+		},
+		{
 			"label": "NPM: Install dependencies",
 			"type": "shell",
 			"command": "npm i ${input:packages}",

@@ -1,7 +1,7 @@
 import { FloatToolkitPrecisionInteger } from "../types";
 
-import { round } from "./round";
 import { precisionsSum } from "../get-precision/precisionsSum";
+import { round } from "./round";
 
 /**
  * @internal

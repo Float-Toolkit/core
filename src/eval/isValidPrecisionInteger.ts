@@ -1,5 +1,5 @@
-import { precisionRange } from "../precisionRange";
 import { isNumber } from "./isNumber";
+import { precisionRange } from "../precisionRange";
 
 /**
  * @internal

@@ -14,7 +14,8 @@
 	"scripts": {
 		"build": "rm -rf dist typings && npm run format && tsc && gen-esm-wrapper dist dist/index.mjs",
 		"format": "prettier --write .",
-		"docs": "npm run format && typedoc"
+		"docs": "npm run format && typedoc",
+		"buildWithDocs": "npm run build && typedoc"
 	},
 	"repository": {
 		"type": "git",

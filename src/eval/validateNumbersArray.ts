@@ -1,5 +1,5 @@
-import { throwNumbersError } from "../errors/throwNumbersError";
 import { isNumbersArray } from "./isNumbersArray";
+import { throwNumbersError } from "../errors/throwNumbersError";
 
 /**
  * @internal

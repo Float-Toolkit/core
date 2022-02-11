@@ -2,16 +2,17 @@ import { FloatToolkitPrecisionInteger } from "../types";
 
 import { validateNumbersArray } from "../eval/validateNumbersArray";
 import { extractFirstNumber } from "./extractFirstNumber";
-import { addArrayItem } from "./addArrayItem";
+import { round } from "./round";
 
 /**
  * @internal
  */
-export function subtract(numbers?: number[], precision?: FloatToolkitPrecisionInteger): number {
+export function divide(numbers: number[], precision: FloatToolkitPrecisionInteger): number {
 	validateNumbersArray(numbers);
 	numbers = numbers!;
 
 	const [firstNumber, newNumbers] = extractFirstNumber(numbers);
 
-	return newNumbers.reduce((total, newNumber) => addArrayItem(total, -newNumber, precision), firstNumber!) ?? 0;
+	const result = newNumbers.reduce((total, newNumber) => total / newNumber, firstNumber!) ?? 0;
+	return round(result, precision);
 }
