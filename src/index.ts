@@ -16,17 +16,14 @@ import { multiply } from "./functions/multiply";
  */
 class FloatToolkit {
 	/**
-	 * @param defaultPrecision The precision (number of decimals) to use if not specified in the function itself. Can be changed later. Default value if 14.
+	 * @param defaultPrecision The precision (number of decimals) to use if not specified in the function itself. Can be changed later. Default value if 10.
 	 * @param options An optional configuration object.
 	 *
 	 * @example
 	 * import FloatToolkit from "@float-toolkit/core";
-	 *
-	 * const ft = new FloatToolkit(10, {
-	 *     forceUseDefaultPrecision: true
-	 * });
+	 * const ft = new FloatToolkit(10, { forceUseDefaultPrecision: true });
 	 */
-	constructor(defaultPrecision: FloatToolkitPrecisionInteger = 14, options: FloatToolkitOptions = {}) {
+	constructor(defaultPrecision: FloatToolkitPrecisionInteger = 10, options: FloatToolkitOptions = {}) {
 		this.defaultPrecision = defaultPrecision;
 		this.resetOptions(options);
 	}
@@ -34,7 +31,7 @@ class FloatToolkit {
 	/**
 	 * @internal
 	 */
-	#precision: FloatToolkitPrecisionInteger = 14;
+	#precision: FloatToolkitPrecisionInteger = 10;
 
 	/**
 	 * @internal
@@ -58,28 +55,32 @@ class FloatToolkit {
 
 	/**
 	 * The options object for this FloatToolkit.
-	 * @readonly
-	 *
-	 * @example
-	 * ft.options.forceUseDefaultPrecision = true; // Use the FloatToolkit's default precision by default in all of the methods.
 	 */
-	get options(): FloatToolkitOptions {
-		return this.#options;
+	get options(): Readonly<FloatToolkitOptions> {
+		return Object.freeze(this.#options);
+	}
+
+	setOptions(options: FloatToolkitOptions): Readonly<FloatToolkitOptions> {
+		validateOptions(options);
+
+		this.#options = { ...this.#options, ...options };
+		return this.options;
 	}
 
 	/**
 	 * Resets the options object for this FloatToolkit to its default values and returns the new object.
-	 * @param newOptions An optional configuration object to apply after resetting.
+	 *
+	 * @param options An optional configuration object to apply after resetting.
 	 * @returns The new options object.
 	 *
 	 * @example
 	 * ft.resetOptions({ forceUseDefaultPrecision: true }); // Default options with forceUseDefaultPrecision set to true.
 	 */
-	resetOptions(newOptions: FloatToolkitOptions = {}): FloatToolkitOptions {
-		validateOptions(newOptions);
+	resetOptions(options: FloatToolkitOptions = {}): Readonly<FloatToolkitOptions> {
+		validateOptions(options);
 
-		this.#options = { ...defaultOptions, ...newOptions };
-		return this.#options;
+		this.#options = { ...defaultOptions, ...options };
+		return this.options;
 	}
 
 	/**
