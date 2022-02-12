@@ -61,6 +61,15 @@ class FloatToolkit {
 		return Object.freeze(this.#options);
 	}
 
+	/**
+	 * Changes the values in the options object for this FloatToolkit and returns the new object.
+	 *
+	 * @param options The configuration object that contains the new options to apply.
+	 * @returns The new options object.
+	 *
+	 * @example
+	 * ft.setOptions({ forceUseDefaultPrecision: true }); // Previous options with forceUseDefaultPrecision set to true.
+	 */
 	setOptions(options: FloatToolkitOptions): Readonly<FloatToolkitOptions> {
 		validateOptions(options);
 
@@ -71,7 +80,7 @@ class FloatToolkit {
 	/**
 	 * Resets the options object for this FloatToolkit to its default values and returns the new object.
 	 *
-	 * @param options An optional configuration object to apply after resetting.
+	 * @param options An optional configuration object containing new options to apply after resetting.
 	 * @returns The new options object.
 	 *
 	 * @example
@@ -145,12 +154,35 @@ class FloatToolkit {
 		return subtract(numbers, precision);
 	}
 
+	/**
+	 * Multiplies two or more numbers, and rounds the product.
+	 *
+	 * **NOTE:** By default, this method does not use the FloatToolkit's default precision. Instead, it calculates the best precision to use based on the original
+	 * numbers (dynamic precision). To always use the default precision, set the `forceUseDefaultPrecision` option to `true`.
+	 *
+	 * @param numbers The numbers to multiply.
+	 * @param precision The precision to use instead of the one chosen by the function.
+	 * @returns The rounded product
+	 *
+	 * @example
+	 * ft.multiply([0.1, 0.9]); // 0.09 if using dynamic precision, or if the precision is set to 16 or lower.
+	 */
 	multiply(numbers: number[], precision?: FloatToolkitPrecisionInteger): number {
 		precision = this.#choosePrecision(precision);
 
 		return multiply(numbers, precision);
 	}
 
+	/**
+	 * Divides two or more numbers (starting with the second number, all of the numbers divide the first one), and rounds the result.
+	 *
+	 * @param numbers The numbers to divide.
+	 * @param precision The precision to use instead of the one chosen by the function.
+	 * @returns The rounded result
+	 *
+	 * @example
+	 * ft.divide([0.09, 0.9]); // 0.1 if the precision is set to 16 or lower.
+	 */
 	divide(numbers: number[], precision = this.defaultPrecision): number {
 		return divide(numbers, precision);
 	}
