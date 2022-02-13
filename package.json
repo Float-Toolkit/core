@@ -1,6 +1,6 @@
 {
 	"name": "@float-toolkit/core",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Float Toolkit is a Node.js package for working with floating-point numbers.",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
@@ -15,17 +15,20 @@
 		"build": "rm -rf dist typings && npm run format && tsc && gen-esm-wrapper dist dist/index.mjs",
 		"format": "prettier --write .",
 		"docs": "rm -rf docs && npm run format && typedoc",
-		"buildWithDocs": "rm -rf docs && npm run build && typedoc",
-		"upload": "npm run buildWithDocs && npm publish --access=public && firebase deploy"
+		"buildWithDocs": "rm -rf docs && npm run build && typedoc"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Float-Toolkit/core.git"
+		"url": "git://github.com/Float-Toolkit/core.git"
 	},
 	"keywords": [
 		"float",
+		"floating-point",
 		"number",
+		"round",
 		"math",
+		"no-dependencies",
+		"dependency-less",
 		"Node.js"
 	],
 	"author": "LuisFerLCC",
