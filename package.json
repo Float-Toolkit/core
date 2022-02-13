@@ -16,7 +16,7 @@
 		"format": "prettier --write .",
 		"docs": "rm -rf docs && npm run format && typedoc",
 		"buildWithDocs": "rm -rf docs && npm run build && typedoc",
-		"deploy": "npm run buildWithDocs && npm publish --access=public && firebase deploy"
+		"upload": "npm run buildWithDocs && npm publish --access=public && firebase deploy"
 	},
 	"repository": {
 		"type": "git",

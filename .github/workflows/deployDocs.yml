@@ -1,0 +1,55 @@
+name: Upload documentation
+
+on:
+    push:
+        branches:
+			- 'stable'
+			- '!master'
+			- '!docs'
+
+		tags:
+			- '**'
+
+    workflow_dispatch:
+
+jobs:
+    build:
+        name: Generate documentation
+        runs-on: ubuntu-latest
+		if: github.repository_owner == 'Float-Toolkit'
+        steps:
+            - name: Checkout stable branch
+              uses: actions/checkout@stable
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Generate documentation
+              run: npm run docs
+
+            - name: Archive documentation artifact
+              uses: actions/upload-artifact@stable
+              with:
+                  name: docs
+                  path: docs
+    upload:
+        name: Upload
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout stable branch
+              uses: actions/checkout@stable
+
+            - name: Download artifact
+              uses: actions/download-artifact@stable
+              with:
+                  name: docs
+                  path: docs
+
+            - name: Deploy to Firebase
+              uses: w9jds/firebase-action@master
+              with:
+                  args: deploy
+
+              env:
+                  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

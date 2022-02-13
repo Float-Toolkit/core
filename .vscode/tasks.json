@@ -57,9 +57,9 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "NPM: Publish package and deploy documentation",
+			"label": "NPM: Publish package and upload documentation",
 			"type": "npm",
-			"script": "deploy"
+			"script": "upload"
 		},
 		{
 			"label": "System: Delete permanently...",

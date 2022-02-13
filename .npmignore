@@ -4,6 +4,7 @@
 # source and docs
 /src
 /docs
+/.github
 .gitignore
 
 # IDEs and editors
