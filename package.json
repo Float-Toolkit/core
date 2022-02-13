@@ -1,7 +1,7 @@
 {
 	"name": "@float-toolkit/core",
 	"version": "1.0.0",
-	"description": "Float Toolkit is a Node.js package for working with floating point numbers.",
+	"description": "Float Toolkit is a Node.js package for working with floating-point numbers.",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./typings/index.d.ts",
@@ -14,8 +14,8 @@
 	"scripts": {
 		"build": "rm -rf dist typings && npm run format && tsc && gen-esm-wrapper dist dist/index.mjs",
 		"format": "prettier --write .",
-		"docs": "npm run format && typedoc",
-		"buildWithDocs": "npm run build && typedoc"
+		"docs": "rm -rf docs && npm run format && typedoc",
+		"buildWithDocs": "rm -rf docs && npm run build && typedoc"
 	},
 	"repository": {
 		"type": "git",

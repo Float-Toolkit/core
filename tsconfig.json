@@ -37,6 +37,7 @@
 	},
 	"typedocOptions": {
 		"entryPoints": ["./src/index.ts", "./src/interfaces.ts", "./src/types.ts"],
-		"out": "docs"
+		"out": "docs",
+		"json": "docs/docs.json"
 	}
 }
