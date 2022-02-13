@@ -1,5 +1,5 @@
 <div align="center" style="margin-bottom: 0.5rem">
-	<img src="assets/ftlogo.svg" width="50" />
+	<img src="media/ftlogo.svg" width="50" />
 </div>
 
 <div align="center">
@@ -54,7 +54,7 @@ console.log(ft.add([0.1, 0.2])); // 0.3
 ### TypeScript
 
 <div align="center" style="margin: 0.5rem 0">
-	<img src="assets/tsftlogo.svg" width="50" />
+	<img src="media/tsftlogo.svg" width="50" />
 </div>
 
 Float Toolkit is written in [TypeScript](https://www.typescriptlang.org/). As such, the package is fully compatible with TypeScript projects. All of the type aliases and interfaces you might need can be imported into your project.
@@ -103,7 +103,7 @@ console.log(result === 0.3); // true
 
 ## Links
 
--   Documentation
+-   [Documentation](https://float-toolkit.firebaseapp.com/)
 -   [GitHub](https://github.com/Float-Toolkit/core)
 -   [npm](https://www.npmjs.com/package/@float-toolkit/core)
 
@@ -111,6 +111,6 @@ console.log(result === 0.3); // true
 
 Before creating an issue, please consider the following:
 
--   Refer to the documentation to make sure the error is actually a bug and not a mistake of your own.
+-   Refer to the [documentation](https://float-toolkit.firebaseapp.com/) to make sure the error is actually a bug and not a mistake of your own.
 -   Make sure the issue hasn't already been reported or suggested.
 -   After following these steps, you can read the contribution guidelines and follow the steps to submit a PR.

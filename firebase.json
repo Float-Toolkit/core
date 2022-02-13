@@ -1,0 +1,7 @@
+{
+	"hosting": {
+		"target": "float-toolkit-core",
+		"public": "docs",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+	}
+}

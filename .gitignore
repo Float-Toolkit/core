@@ -26,3 +26,8 @@
 # misc
 npm-debug.log
 yarn-error.log
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

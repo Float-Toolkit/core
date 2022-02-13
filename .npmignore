@@ -18,3 +18,10 @@
 .editorconfig
 .prettierignore
 tsconfig.json
+
+# Firebase
+.firebase
+.firebaserc
+firebase.json
+*-debug.log
+.runtimeconfig.json

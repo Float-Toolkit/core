@@ -1,0 +1,14 @@
+{
+	"targets": {
+		"luisferlcc-docs": {
+			"hosting": {
+				"float-toolkit-core": [
+					"float-toolkit"
+				]
+			}
+		}
+	},
+	"projects": {
+		"default": "luisferlcc-docs"
+	}
+}

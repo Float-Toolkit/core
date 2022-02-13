@@ -57,6 +57,11 @@
 			"problemMatcher": []
 		},
 		{
+			"label": "NPM: Publish package and deploy documentation",
+			"type": "npm",
+			"script": "deploy"
+		},
+		{
 			"label": "System: Delete permanently...",
 			"type": "shell",
 			"command": "rm -rf ${input:delFiles}",

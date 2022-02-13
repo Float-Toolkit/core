@@ -37,7 +37,9 @@
 	},
 	"typedocOptions": {
 		"entryPoints": ["./src/index.ts", "./src/interfaces.ts", "./src/types.ts"],
+		"media": "media",
+
 		"out": "docs",
-		"json": "docs/docs.json"
+		"name": "Float Toolkit"
 	}
 }

@@ -15,7 +15,8 @@
 		"build": "rm -rf dist typings && npm run format && tsc && gen-esm-wrapper dist dist/index.mjs",
 		"format": "prettier --write .",
 		"docs": "rm -rf docs && npm run format && typedoc",
-		"buildWithDocs": "rm -rf docs && npm run build && typedoc"
+		"buildWithDocs": "rm -rf docs && npm run build && typedoc",
+		"deploy": "npm run buildWithDocs && npm publish --access=public && firebase deploy"
 	},
 	"repository": {
 		"type": "git",
@@ -32,7 +33,7 @@
 	"bugs": {
 		"url": "https://github.com/Float-Toolkit/core/issues"
 	},
-	"homepage": "https://github.com/Float-Toolkit/core#readme",
+	"homepage": "https://float-toolkit.firebaseapp.com/",
 	"devDependencies": {
 		"gen-esm-wrapper": "^1.1.3",
 		"prettier": "^2.5.1",
