@@ -58,17 +58,7 @@ jobs:
           path: typings
 
       - name: Publish on NPM
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          access: public
-          registry: https://registry.npmjs.org/
-          token: ${{ secrets.NPM_TOKEN }}
-          check-version: false
+        run: npm publish --access=public --registry=https://registry.npmjs.org --token=${{ secrets.NPM_TOKEN }}
 
-      - name: Publish on GitHub Packages
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          access: public
-          registry: https://npm.pkg.github.com/
-          token: ${{ secrets.GITHUB_TOKEN }}
-          check-version: false
+      - name: Publish on NPM
+        run: npm publish --access=public --registry=https://npm.pkg.github.com --token=${{ secrets.GITHUB_TOKEN }}
