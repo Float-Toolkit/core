@@ -28,7 +28,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: package
-          path: .
 
   publish-npm:
     name: Publish on NPM registry
@@ -43,7 +42,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: package
-          path: .
 
       - name: Publish
         uses: JS-DevTools/npm-publish@v1
@@ -54,7 +52,7 @@ jobs:
 
   publish-ghp:
     name: Publish on GitHub Packages registry
-    needs: build
+    needs: publish-npm
     runs-on: ubuntu-latest
 
     steps:
@@ -65,7 +63,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: package
-          path: .
 
       - name: Publish
         uses: JS-DevTools/npm-publish@v1
