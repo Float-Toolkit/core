@@ -1,4 +1,4 @@
-import { FloatToolkitPrecisionInteger } from "./types";
+import { FloatToolkitPrecisionInteger } from "./types.js";
 
 /**
  * @internal

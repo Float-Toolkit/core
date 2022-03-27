@@ -1,12 +1,12 @@
 {
 	"compilerOptions": {
 		"target": "es6",
-		"lib": ["ESNext"],
+		"lib": ["esnext"],
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"useDefineForClassFields": true,
 
-		"module": "commonjs",
+		"module": "esnext",
 		"rootDir": "./src/",
 		"moduleResolution": "node",
 

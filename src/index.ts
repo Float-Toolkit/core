@@ -1,15 +1,15 @@
-import { FloatToolkitPrecisionInteger } from "./types";
-import { FloatToolkitOptions } from "./interfaces";
+import { FloatToolkitPrecisionInteger } from "./types.js";
+import { FloatToolkitOptions } from "./interfaces.js";
 
-import { isValidPrecisionInteger } from "./eval/isValidPrecisionInteger";
-import { precisionRange } from "./precisionRange";
-import { validateOptions } from "./eval/validateOptions";
-import { defaultOptions } from "./defaultOptions";
-import { round } from "./functions/round";
-import { add } from "./functions/add";
-import { subtract } from "./functions/subtract";
-import { multiply } from "./functions/multiply";
-import { divide } from "./functions/divide";
+import { isValidPrecisionInteger } from "./eval/isValidPrecisionInteger.js";
+import { precisionRange } from "./precisionRange.js";
+import { validateOptions } from "./eval/validateOptions.js";
+import { defaultOptions } from "./defaultOptions.js";
+import { round } from "./functions/round.js";
+import { add } from "./functions/add.js";
+import { subtract } from "./functions/subtract.js";
+import { multiply } from "./functions/multiply.js";
+import { divide } from "./functions/divide.js";
 
 /**
  * A FloatToolkit contains methods to round floats and perform accurate math operations with them.
@@ -188,4 +188,6 @@ class FloatToolkit {
 	}
 }
 
-export = FloatToolkit;
+export default FloatToolkit;
+export * from "./types.js";
+export * from "./interfaces.js";

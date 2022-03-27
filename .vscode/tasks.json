@@ -6,31 +6,38 @@
 			"type": "typescript",
 			"tsconfig": "tsconfig.json",
 			"option": "watch",
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			}
+			"isBackground": true,
+			"group": "build"
 		},
 		{
 			"label": "Prettier: Pretty-print...",
 			"type": "shell",
 			"command": "prettier --write ${input:files}",
-			"problemMatcher": []
+			"isBackground": true
 		},
 		{
 			"label": "NPM: Build",
 			"type": "npm",
-			"script": "build"
+			"script": "build",
+			"isBackground": true,
+			"group": "build"
 		},
 		{
 			"label": "NPM: Generate documentation",
 			"type": "npm",
-			"script": "docs"
+			"script": "docs",
+			"isBackground": true,
+			"group": "build"
 		},
 		{
 			"label": "NPM: Build and generate documentation",
 			"type": "npm",
-			"script": "buildWithDocs"
+			"script": "buildWithDocs",
+			"isBackground": true,
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		},
 		{
 			"label": "NPM: Install dependencies",
@@ -55,11 +62,6 @@
 			"type": "shell",
 			"command": "npm un ${input:delPackages}",
 			"problemMatcher": []
-		},
-		{
-			"label": "NPM: Publish package and upload documentation",
-			"type": "npm",
-			"script": "upload"
 		},
 		{
 			"label": "System: Delete permanently...",

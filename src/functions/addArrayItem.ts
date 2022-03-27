@@ -1,7 +1,7 @@
-import { FloatToolkitPrecisionInteger } from "../types";
+import { FloatToolkitPrecisionInteger } from "../types.js";
 
-import { getMaxPrecision } from "../get-precision/getMaxPrecision";
-import { round } from "./round";
+import { getMaxPrecision } from "../get-precision/getMaxPrecision.js";
+import { round } from "./round.js";
 
 /**
  * @internal

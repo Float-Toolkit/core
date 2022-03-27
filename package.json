@@ -1,25 +1,24 @@
 {
 	"name": "@float-toolkit/core",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Float Toolkit is a Node.js package for working with floating-point numbers.",
 	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
+	"type": "module",
 	"types": "./typings/index.d.ts",
 	"exports": {
 		".": {
-			"require": "./dist/index.js",
-			"import": "./dist/index.mjs"
+			"import": "./dist/index.js"
 		}
 	},
 	"scripts": {
-		"build": "rm -rf dist typings && npm run format && tsc && gen-esm-wrapper dist dist/index.mjs",
+		"build": "rm -rf dist typings && npm run format && tsc",
 		"format": "prettier --write .",
 		"docs": "rm -rf docs && npm run format && typedoc",
 		"buildWithDocs": "rm -rf docs && npm run build && typedoc"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/Float-Toolkit/core.git"
+		"url": "git://github.com/float-toolkit/core.git"
 	},
 	"keywords": [
 		"float",
@@ -34,11 +33,10 @@
 	"author": "LuisFerLCC",
 	"license": "Apache-2.0",
 	"bugs": {
-		"url": "https://github.com/Float-Toolkit/core/issues"
+		"url": "https://github.com/float-toolkit/core/issues"
 	},
-	"homepage": "https://float-toolkit.firebaseapp.com/",
+	"homepage": "https://float-toolkit.web.app/",
 	"devDependencies": {
-		"gen-esm-wrapper": "^1.1.3",
 		"prettier": "^2.5.1",
 		"typedoc": "^0.22.11",
 		"typedoc-plugin-rename-defaults": "^0.4.0",

@@ -1,7 +1,7 @@
-import { FloatToolkitPrecisionInteger } from "../types";
+import { FloatToolkitPrecisionInteger } from "../types.js";
 
-import { getPrecision } from "./getPrecision";
-import { precisionRange } from "../precisionRange";
+import { getPrecision } from "./getPrecision.js";
+import { precisionRange } from "../precisionRange.js";
 
 /**
  * @internal

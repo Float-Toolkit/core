@@ -1,8 +1,8 @@
-import { FloatToolkitPrecisionInteger } from "../types";
+import { FloatToolkitPrecisionInteger } from "../types.js";
 
-import { validateNumbersArray } from "../eval/validateNumbersArray";
-import { extractFirstNumber } from "./extractFirstNumber";
-import { round } from "./round";
+import { validateNumbersArray } from "../eval/validateNumbersArray.js";
+import { extractFirstNumber } from "./extractFirstNumber.js";
+import { round } from "./round.js";
 
 /**
  * @internal

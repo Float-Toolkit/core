@@ -1,7 +1,7 @@
-import { FTOptionLabel } from "../types";
+import { FTOptionLabel } from "../types.js";
 
-import { defaultOptions } from "../defaultOptions";
-import { FTConfigError } from "../errors/FTConfigError";
+import { defaultOptions } from "../defaultOptions.js";
+import { FTConfigError } from "../errors/FTConfigError.js";
 
 /**
  * @internal

@@ -1,5 +1,5 @@
 <div align="center" style="margin-bottom: 0.5rem">
-	<img src="media/ftlogo.svg" width="50" />
+	<img src="https://raw.githubusercontent.com/float-toolkit/core/HEAD/media/ftlogo.svg" width="50" />
 </div>
 
 <div align="center">
@@ -29,14 +29,7 @@ npm install @float-toolkit/core
 
 The package export is a `class` called `FloatToolkit`. Once you import it, you can create multiple `FloatToolkit` instances.
 
-CommonJS import:
-
-```js
-const FloatToolkit = require("@float-toolkit/core");
-const ft = new FloatToolkit();
-```
-
-ESM import:
+**NOTE:** Version `1.0.2` and later only support ESM imports. Earlier versions are deprecated because of CommonJS imports conflicting with TypeScript type declarations.
 
 ```js
 import FloatToolkit from "@float-toolkit/core";
@@ -54,7 +47,7 @@ console.log(ft.add([0.1, 0.2])); // 0.3
 ### TypeScript
 
 <div align="center" style="margin: 0.5rem 0">
-	<img src="media/tsftlogo.svg" width="50" />
+	<img src="https://raw.githubusercontent.com/float-toolkit/core/HEAD/media/tsftlogo.svg" width="50" />
 </div>
 
 Float Toolkit is written in [TypeScript](https://www.typescriptlang.org/). As such, the package is fully compatible with TypeScript projects. All of the type aliases and interfaces you might need can be imported into your project.
@@ -62,8 +55,7 @@ Float Toolkit is written in [TypeScript](https://www.typescriptlang.org/). As su
 #### Example:
 
 ```ts
-import FloatToolkit from "@float-toolkit/core";
-import { FloatToolkitOptions } from "@float-toolkit/core/typings/interfaces";
+import FloatToolkit, { FloatToolkitOptions } from "@float-toolkit/core";
 
 const createFT = (options: FloatToolkitOptions) => new FloatToolkit(5, options);
 ```
@@ -92,7 +84,7 @@ const roundedResult = Number(result.toFixed(1)); // 0.3
 console.log(roundedResult === 0.3); // true
 ```
 
-This alternative fixes the main problem the previous solution has, but it also increases the amount of boilerplate code, since it requires you to add `Number(/* variable */.toFixed(/* precision */))` for every single number.
+This alternative fixes the main problem the previous solution has, but it also increases the amount of boilerplate code, since it requires you to add `Number(variable.toFixed(precision))` for every single number.
 
 The Float Toolkit syntax is much cleaner and more concise.
 
@@ -103,14 +95,14 @@ console.log(result === 0.3); // true
 
 ## Links
 
--   [Documentation](https://float-toolkit.firebaseapp.com/)
--   [GitHub](https://github.com/Float-Toolkit/core)
+-   [Documentation](https://float-toolkit.web.app/)
+-   [GitHub](https://github.com/float-toolkit/core)
 -   [npm](https://www.npmjs.com/package/@float-toolkit/core)
 
 ## Contributing
 
 Before creating an issue, please consider the following:
 
--   Refer to the [documentation](https://float-toolkit.firebaseapp.com/) to make sure the error is actually a bug and not a mistake of your own.
+-   Refer to the [documentation](https://float-toolkit.web.app/) to make sure the error is actually a bug and not a mistake of your own.
 -   Make sure the issue hasn't already been reported or suggested.
--   After following these steps, you can read the contribution guidelines and follow the steps to submit a PR.
+-   After following these steps, you can read the [contribution guidelines](https://github.com/float-toolkit/core/blob/master/.github/CONTRIBUTING.md) and follow the steps to submit a PR.

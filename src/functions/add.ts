@@ -1,7 +1,7 @@
-import { FloatToolkitPrecisionInteger } from "../types";
+import { FloatToolkitPrecisionInteger } from "../types.js";
 
-import { validateNumbersArray } from "../eval/validateNumbersArray";
-import { addArrayItem } from "./addArrayItem";
+import { validateNumbersArray } from "../eval/validateNumbersArray.js";
+import { addArrayItem } from "./addArrayItem.js";
 
 /**
  * @internal

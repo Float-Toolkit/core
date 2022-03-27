@@ -1,5 +1,5 @@
-import { isNumber } from "../eval/isNumber";
-import { throwNumbersError } from "../errors/throwNumbersError";
+import { isNumber } from "../eval/isNumber.js";
+import { throwNumbersError } from "../errors/throwNumbersError.js";
 
 type FirstNumberExtractedArray = [number, number[]];
 
