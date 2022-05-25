@@ -9,6 +9,7 @@
 		"module": "esnext",
 		"rootDir": "./src/",
 		"moduleResolution": "node",
+		"types": ["node"],
 
 		"declaration": true,
 		"outDir": "./dist/",
@@ -35,8 +36,9 @@
 
 		"skipLibCheck": true
 	},
+
 	"typedocOptions": {
-		"entryPoints": ["./src/index.ts", "./src/interfaces.ts", "./src/types.ts"],
+		"entryPoints": ["./src/index.ts"],
 		"media": "media",
 
 		"out": "docs",

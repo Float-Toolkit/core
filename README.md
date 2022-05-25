@@ -29,8 +29,6 @@ npm install @float-toolkit/core
 
 The package export is a `class` called `FloatToolkit`. Once you import it, you can create multiple `FloatToolkit` instances.
 
-**NOTE:** Version `1.0.2` and later only support ESM imports. Earlier versions are deprecated because of CommonJS imports conflicting with TypeScript type declarations.
-
 ```js
 import FloatToolkit from "@float-toolkit/core";
 const ft = new FloatToolkit();
@@ -55,9 +53,10 @@ Float Toolkit is written in [TypeScript](https://www.typescriptlang.org/). As su
 #### Example:
 
 ```ts
-import FloatToolkit, { FloatToolkitOptions } from "@float-toolkit/core";
+import FloatToolkit from "@float-toolkit/core";
 
-const createFT = (options: FloatToolkitOptions) => new FloatToolkit(5, options);
+const createFT = (options: FloatToolkit.Options) =>
+	new FloatToolkit(5, options);
 ```
 
 ## Why use Float Toolkit?

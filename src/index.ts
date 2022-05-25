@@ -1,7 +1,4 @@
-import { FloatToolkitPrecisionInteger } from "./types.js";
-import { FloatToolkitOptions } from "./interfaces.js";
-
-import { isValidPrecisionInteger } from "./eval/isValidPrecisionInteger.js";
+import { isValidPrecision } from "./eval/isValidPrecision.js";
 import { precisionRange } from "./precisionRange.js";
 import { validateOptions } from "./eval/validateOptions.js";
 import { defaultOptions } from "./defaultOptions.js";
@@ -24,7 +21,7 @@ class FloatToolkit {
 	 * import FloatToolkit from "@float-toolkit/core";
 	 * const ft = new FloatToolkit(10, { forceUseDefaultPrecision: true });
 	 */
-	constructor(defaultPrecision: FloatToolkitPrecisionInteger = 10, options: FloatToolkitOptions = {}) {
+	constructor(defaultPrecision: FloatToolkit.Precision = 10, options: FloatToolkit.Options = {}) {
 		this.defaultPrecision = defaultPrecision;
 		this.resetOptions(options);
 	}
@@ -32,23 +29,23 @@ class FloatToolkit {
 	/**
 	 * @internal
 	 */
-	#precision: FloatToolkitPrecisionInteger = 10;
+	#precision: FloatToolkit.Precision = 10;
 
 	/**
 	 * @internal
 	 */
-	#options: FloatToolkitOptions = {};
+	#options: FloatToolkit.Options = {};
 
 	/**
 	 * An integer between 1 and 17.
 	 * Defines the precision (number of decimals) to use by default, if the precision is not specified in the function itself.
 	 */
-	get defaultPrecision(): FloatToolkitPrecisionInteger {
+	get defaultPrecision(): FloatToolkit.Precision {
 		return this.#precision;
 	}
 
-	set defaultPrecision(precision: FloatToolkitPrecisionInteger) {
-		if (!isValidPrecisionInteger(precision))
+	set defaultPrecision(precision: FloatToolkit.Precision) {
+		if (!isValidPrecision(precision))
 			throw new TypeError(`defaultPrecision must be an integer between ${precisionRange.min} and ${precisionRange.max - 1}.`);
 
 		this.#precision = precision;
@@ -57,7 +54,7 @@ class FloatToolkit {
 	/**
 	 * The options object for this FloatToolkit.
 	 */
-	get options(): Readonly<FloatToolkitOptions> {
+	get options(): Readonly<FloatToolkit.Options> {
 		return Object.freeze(this.#options);
 	}
 
@@ -70,7 +67,7 @@ class FloatToolkit {
 	 * @example
 	 * ft.setOptions({ forceUseDefaultPrecision: true }); // Previous options with forceUseDefaultPrecision set to true.
 	 */
-	setOptions(options: FloatToolkitOptions): Readonly<FloatToolkitOptions> {
+	setOptions(options: FloatToolkit.Options): Readonly<FloatToolkit.Options> {
 		validateOptions(options);
 
 		this.#options = { ...this.#options, ...options };
@@ -86,7 +83,7 @@ class FloatToolkit {
 	 * @example
 	 * ft.resetOptions({ forceUseDefaultPrecision: true }); // Default options with forceUseDefaultPrecision set to true.
 	 */
-	resetOptions(options: FloatToolkitOptions = {}): Readonly<FloatToolkitOptions> {
+	resetOptions(options: FloatToolkit.Options = {}): Readonly<FloatToolkit.Options> {
 		validateOptions(options);
 
 		this.#options = { ...defaultOptions, ...options };
@@ -96,7 +93,7 @@ class FloatToolkit {
 	/**
 	 * @internal
 	 */
-	#choosePrecision(precisionParam?: FloatToolkitPrecisionInteger): FloatToolkitPrecisionInteger | undefined {
+	#choosePrecision(precisionParam?: FloatToolkit.Precision): FloatToolkit.Precision | undefined {
 		if (!precisionParam && this.options.forceUseDefaultPrecision) return this.defaultPrecision;
 
 		return precisionParam;
@@ -129,7 +126,7 @@ class FloatToolkit {
 	 * @example
 	 * ft.add([0.1, 0.2]); // 0.3 if using dynamic precision, or if the precision is set to 16 or lower.
 	 */
-	add(numbers: number[], precision?: FloatToolkitPrecisionInteger): number {
+	add(numbers: number[], precision?: FloatToolkit.Precision): number {
 		precision = this.#choosePrecision(precision);
 
 		return add(numbers, precision);
@@ -148,7 +145,7 @@ class FloatToolkit {
 	 * @example
 	 * ft.subtract([0.8, 0.1, 0.3]); // 0.4 if using dynamic precision, or if the precision is set to 15 or lower.
 	 */
-	subtract(numbers: number[], precision?: FloatToolkitPrecisionInteger): number {
+	subtract(numbers: number[], precision?: FloatToolkit.Precision): number {
 		precision = this.#choosePrecision(precision);
 
 		return subtract(numbers, precision);
@@ -167,7 +164,7 @@ class FloatToolkit {
 	 * @example
 	 * ft.multiply([0.1, 0.9]); // 0.09 if using dynamic precision, or if the precision is set to 16 or lower.
 	 */
-	multiply(numbers: number[], precision?: FloatToolkitPrecisionInteger): number {
+	multiply(numbers: number[], precision?: FloatToolkit.Precision): number {
 		precision = this.#choosePrecision(precision);
 
 		return multiply(numbers, precision);
@@ -188,6 +185,52 @@ class FloatToolkit {
 	}
 }
 
+namespace FloatToolkit {
+	type PrependNextNum<A extends Array<unknown>> = A["length"] extends infer T
+		? ((t: T, ...a: A) => void) extends (...x: infer X) => void
+			? X
+			: never
+		: never;
+
+	type EnumerateInternal<A extends Array<unknown>, N extends number> = {
+		0: A;
+		1: EnumerateInternal<PrependNextNum<A>, N>;
+	}[N extends A["length"] ? 0 : 1];
+
+	type Enumerate<N extends number> = EnumerateInternal<[], N> extends (infer E)[] ? E : never;
+
+	type IntegerRange<FROM extends number, TO extends number> = Exclude<Enumerate<TO>, Enumerate<FROM>>;
+
+	/**
+	 * An integer between 1 and 17, which can be used as a FloatToolkit's default precision.
+	 */
+	export type Precision = IntegerRange<1, 18>;
+
+	/**
+	 * Options that can be set to a FloatToolkit to modify its behavior.
+	 */
+	export interface Options {
+		/**
+		 * Always use the FloatToolkit's default precision instead of dynamic precision.
+		 */
+		forceUseDefaultPrecision?: boolean;
+	}
+
+	/**
+	 * @internal
+	 */
+	export type OptionLabel = keyof FloatToolkit.Options;
+
+	/**
+	 * @internal
+	 */
+	export class ConfigError extends Error {
+		constructor(message?: string) {
+			super(message);
+		}
+
+		override name = "FloatToolkit.ConfigError";
+	}
+}
+
 export default FloatToolkit;
-export * from "./types.js";
-export * from "./interfaces.js";

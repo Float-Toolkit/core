@@ -1,8 +1,8 @@
-import { FloatToolkitOptions } from "./interfaces.js";
+import FloatToolkit from "./index.js";
 
 /**
  * @internal
  */
-export const defaultOptions: FloatToolkitOptions = {
+export const defaultOptions: FloatToolkit.Options = {
 	forceUseDefaultPrecision: false,
 };

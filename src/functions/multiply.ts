@@ -1,4 +1,4 @@
-import { FloatToolkitPrecisionInteger } from "../types.js";
+import FloatToolkit from "../index.js";
 
 import { validateNumbersArray } from "../eval/validateNumbersArray.js";
 import { extractFirstNumber } from "./extractFirstNumber.js";
@@ -7,7 +7,7 @@ import { multiplyArrayItem } from "./multiplyArrayItem.js";
 /**
  * @internal
  */
-export function multiply(numbers: number[], precision?: FloatToolkitPrecisionInteger): number {
+export function multiply(numbers: number[], precision?: FloatToolkit.Precision): number {
 	validateNumbersArray(numbers);
 	numbers = numbers!;
 
