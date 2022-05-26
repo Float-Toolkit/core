@@ -1,7 +1,9 @@
-import { isValidPrecision } from "./eval/isValidPrecision.js";
 import { precisionRange } from "./precisionRange.js";
-import { validateOptions } from "./eval/validateOptions.js";
 import { defaultOptions } from "./defaultOptions.js";
+
+import { isValidPrecision } from "./eval/isValidPrecision.js";
+import { validateOptions } from "./eval/validateOptions.js";
+
 import { round } from "./functions/round.js";
 import { add } from "./functions/add.js";
 import { subtract } from "./functions/subtract.js";
@@ -219,7 +221,7 @@ namespace FloatToolkit {
 	/**
 	 * @internal
 	 */
-	export type OptionLabel = keyof FloatToolkit.Options;
+	export type OptionLabel = keyof Options;
 
 	/**
 	 * @internal

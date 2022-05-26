@@ -1,5 +1,6 @@
-import { isNumber } from "./isNumber.js";
 import { precisionRange } from "../precisionRange.js";
+
+import { isNumber } from "./isNumber.js";
 
 /**
  * @internal
