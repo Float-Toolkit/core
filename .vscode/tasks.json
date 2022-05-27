@@ -14,6 +14,29 @@
 		},
 
 		{
+			"label": "Jest: Test",
+
+			"type": "npm",
+			"script": "test",
+
+			"isBackground": true,
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
+		},
+
+		{
+			"label": "Jest: Watch Mode",
+
+			"type": "npm",
+			"script": "testWatch",
+
+			"isBackground": true,
+			"group": "test"
+		},
+
+		{
 			"label": "Prettier: Pretty-print...",
 
 			"type": "shell",

@@ -37,6 +37,8 @@
 		"skipLibCheck": true
 	},
 
+	"include": ["./src/**/*.ts"],
+
 	"typedocOptions": {
 		"entryPoints": ["./src/index.ts"],
 		"intentionallyNotExported": ["IntegerRange"],
