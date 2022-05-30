@@ -8,12 +8,21 @@
 
 [![NPM latest version](https://img.shields.io/npm/v/@float-toolkit/core?label=version&logo=npm)](https://www.npmjs.com/package/@float-toolkit/core)
 [![NPM downloads](https://img.shields.io/npm/dt/@float-toolkit/core?logo=npm)](https://www.npmjs.com/package/@float-toolkit/core)
+[![Code coverage with Codecov](https://img.shields.io/codecov/c/github/float-toolkit/core/tests?logo=codecov&logoColor=white)](https://codecov.io/gh/float-toolkit/core)
 
 </div>
 
 **Float Toolkit** is a lightweight, dependency-less [Node.js](https://nodejs.org) package that allows you to work with _floats_ ([floating-point numbers](https://en.wikipedia.org/wiki/Floating-point_arithmetic), or numbers with decimals).
 
 You can round floats down to any number of digits, and perform accurate math operations (addition, subtraction, multiplication and division) with them.
+
+## Features
+
+-   Accurate math operations
+-   Round floats to any number of digits
+-   No dependencies
+-   TypeScript type declarations
+-   \> 95% code coverage
 
 ## Get started
 
@@ -48,7 +57,7 @@ console.log(ft.add([0.1, 0.2])); // 0.3
 	<img src="https://raw.githubusercontent.com/float-toolkit/core/HEAD/media/tsftlogo.svg" width="50" />
 </div>
 
-Float Toolkit is written in [TypeScript](https://www.typescriptlang.org/). As such, the package is fully compatible with TypeScript projects. All of the type aliases and interfaces you might need can be imported into your project.
+Float Toolkit is written in [TypeScript](https://www.typescriptlang.org/). As such, the package is fully compatible with TypeScript projects. All of the type aliases and interfaces can be imported into your project.
 
 #### Example:
 
