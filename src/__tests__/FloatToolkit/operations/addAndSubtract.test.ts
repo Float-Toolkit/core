@@ -15,6 +15,7 @@ describe("FloatToolkit.add()", () => {
 		expect(ft.add([0.1, 0.2])).toBe(0.3);
 
 		expect(ft.add([2022.1, 2022.3])).toBe(4044.4);
+		expect(ft.add([0.123, 0.456, 0.1])).toBe(0.679);
 	});
 
 	it("should round to the default precision if and only if specified in the options", () => {
@@ -53,6 +54,7 @@ describe("FloatToolkit.subtract()", () => {
 		expect(ft.subtract([0.8, 0.1, 0.3])).toBe(0.4);
 
 		expect(ft.subtract([2022.2, 0.1])).toBe(2022.1);
+		expect(ft.subtract([0.679, 0.1])).toBe(0.579);
 	});
 
 	it("should round to the default precision if and only if specified in the options", () => {
