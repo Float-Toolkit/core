@@ -5,3 +5,6 @@
 /dist
 /typings
 /docs
+
+# testing and coverage
+/coverage

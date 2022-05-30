@@ -15,7 +15,7 @@
 		"format": "prettier --write .",
 		"docs": "rm -rf docs && npm run format && npm test && typedoc",
 		"buildWithDocs": "rm -rf docs && npm run build && typedoc",
-		"test": "jest",
+		"test": "rm -rf coverage && jest",
 		"testWatch": "jest --watch"
 	},
 	"repository": {

@@ -1,3 +1,6 @@
+// @ts-ignore
+import PackageJSON from "../package.json";
+
 import { precisionRange } from "./precisionRange.js";
 import { defaultOptions } from "./defaultOptions.js";
 
@@ -9,6 +12,7 @@ import { add } from "./functions/add.js";
 import { subtract } from "./functions/subtract.js";
 import { multiply } from "./functions/multiply.js";
 import { divide } from "./functions/divide.js";
+import { getVersionNumber } from "./functions/getVersionNumber";
 
 /**
  * A FloatToolkit contains methods to round floats and perform accurate math operations with them.
@@ -227,6 +231,31 @@ namespace FloatToolkit {
 	 * @internal
 	 */
 	export type FirstNumberExtractedArray = [number | undefined, number[]];
+
+	interface Version {
+		get full(): string;
+		get major(): string;
+		get minor(): string;
+		get patch(): string;
+	}
+
+	export const VERSION: Version = {
+		get full() {
+			return PackageJSON.version;
+		},
+
+		get major() {
+			return getVersionNumber(PackageJSON.version, 0);
+		},
+
+		get minor() {
+			return getVersionNumber(PackageJSON.version, 1);
+		},
+
+		get patch() {
+			return getVersionNumber(PackageJSON.version, 2);
+		},
+	};
 
 	/**
 	 * @internal
