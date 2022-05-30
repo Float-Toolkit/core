@@ -6,6 +6,8 @@ const config = {
 	coverageProvider: "v8",
 	errorOnDeprecated: true,
 
+	modulePathIgnorePatterns: ["<rootDir>/src/__tests__/__mocks__"],
+
 	preset: "ts-jest",
 	testEnvironment: "node",
 	resolver: "jest-ts-webcompat-resolver",

@@ -8,11 +8,9 @@ import { validateNumbersArray } from "../eval/validateNumbersArray.js";
 /**
  * @internal
  */
-export function subtract(numbers?: number[], precision?: FloatToolkit.Precision): number {
+export function subtract(numbers: number[], precision?: FloatToolkit.Precision): number {
 	validateNumbersArray(numbers);
-	numbers = numbers!;
 
 	const [firstNumber, newNumbers] = extractFirstNumber(numbers);
-
-	return newNumbers.reduce((total, newNumber) => addArrayItem(total, -newNumber, precision), firstNumber!) ?? 0;
+	return newNumbers.reduce((total, newNumber) => addArrayItem(total, -newNumber, precision), firstNumber ?? 0);
 }

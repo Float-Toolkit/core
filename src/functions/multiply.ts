@@ -10,9 +10,7 @@ import { validateNumbersArray } from "../eval/validateNumbersArray.js";
  */
 export function multiply(numbers: number[], precision?: FloatToolkit.Precision): number {
 	validateNumbersArray(numbers);
-	numbers = numbers!;
 
 	const [firstNumber, newNumbers] = extractFirstNumber(numbers);
-
-	return newNumbers.reduce((total, newNumber) => multiplyArrayItem(total, newNumber, precision), firstNumber!) ?? 0;
+	return newNumbers.reduce((total, newNumber) => multiplyArrayItem(total, newNumber, precision), firstNumber ?? 0);
 }

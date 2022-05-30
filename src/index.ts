@@ -23,7 +23,7 @@ class FloatToolkit {
 	 * import FloatToolkit from "@float-toolkit/core";
 	 * const ft = new FloatToolkit(10, { forceUseDefaultPrecision: true });
 	 */
-	constructor(defaultPrecision: FloatToolkit.Precision = 10, options: FloatToolkit.Options = {}) {
+	constructor(defaultPrecision: FloatToolkit.Precision = 10, options: Partial<FloatToolkit.Options> = {}) {
 		this.defaultPrecision = defaultPrecision;
 		this.resetOptions(options);
 	}
@@ -36,7 +36,7 @@ class FloatToolkit {
 	/**
 	 * @internal
 	 */
-	#options: FloatToolkit.Options = {};
+	#options: FloatToolkit.Options = defaultOptions;
 
 	/**
 	 * An integer between 1 and 17.
@@ -69,7 +69,7 @@ class FloatToolkit {
 	 * @example
 	 * ft.setOptions({ forceUseDefaultPrecision: true }); // Previous options with forceUseDefaultPrecision set to true.
 	 */
-	setOptions(options: FloatToolkit.Options): Readonly<FloatToolkit.Options> {
+	setOptions(options: Partial<FloatToolkit.Options>): Readonly<FloatToolkit.Options> {
 		validateOptions(options);
 
 		this.#options = { ...this.#options, ...options };
@@ -85,7 +85,7 @@ class FloatToolkit {
 	 * @example
 	 * ft.resetOptions({ forceUseDefaultPrecision: true }); // Default options with forceUseDefaultPrecision set to true.
 	 */
-	resetOptions(options: FloatToolkit.Options = {}): Readonly<FloatToolkit.Options> {
+	resetOptions(options: Partial<FloatToolkit.Options> = {}): Readonly<FloatToolkit.Options> {
 		validateOptions(options);
 
 		this.#options = { ...defaultOptions, ...options };
@@ -215,13 +215,18 @@ namespace FloatToolkit {
 		/**
 		 * Always use the FloatToolkit's default precision instead of dynamic precision.
 		 */
-		forceUseDefaultPrecision?: boolean;
+		forceUseDefaultPrecision: boolean;
 	}
 
 	/**
 	 * @internal
 	 */
 	export type OptionLabel = keyof Options;
+
+	/**
+	 * @internal
+	 */
+	export type FirstNumberExtractedArray = [number | undefined, number[]];
 
 	/**
 	 * @internal

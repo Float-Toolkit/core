@@ -10,5 +10,5 @@ import { validateNumbersArray } from "../eval/validateNumbersArray.js";
 export function add(numbers: number[], precision?: FloatToolkit.Precision): number {
 	validateNumbersArray(numbers);
 
-	return numbers!.reduce((total, newNumber) => addArrayItem(total, newNumber, precision), 0) ?? 0;
+	return numbers.reduce((total, newNumber) => addArrayItem(total, newNumber, precision), 0);
 }
