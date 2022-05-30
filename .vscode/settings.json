@@ -1,4 +1,4 @@
 {
-	"cSpell.words": ["ftlogo", "luisferlcc", "tsftlogo", "typedoc", "webcompat"],
+	"cSpell.words": ["Codecov", "ftlogo", "luisferlcc", "tsftlogo", "typedoc", "webcompat"],
 	"typescript.tsdk": "node_modules\\typescript\\lib"
 }

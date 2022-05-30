@@ -11,9 +11,9 @@
 		}
 	},
 	"scripts": {
-		"build": "npm run test && rm -rf dist typings && npm run format && tsc",
+		"build": "rm -rf dist typings && npm run format && npm test && tsc",
 		"format": "prettier --write .",
-		"docs": "npm run test && rm -rf docs && npm run format && typedoc",
+		"docs": "rm -rf docs && npm run format && npm test && typedoc",
 		"buildWithDocs": "rm -rf docs && npm run build && typedoc",
 		"test": "jest",
 		"testWatch": "jest --watch"
