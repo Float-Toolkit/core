@@ -1,6 +1,7 @@
-import FloatToolkit from "../index.js";
+import FloatToolkit from "..";
 
-import { defaultOptions } from "../defaultOptions.js";
+import { defaultOptions } from "../defaultOptions";
+import { FloatToolkitError } from "../errors/FloatToolkitError";
 
 /**
  * @internal
@@ -15,11 +16,11 @@ export function validateOptions(options: any, checkFullObject?: boolean): void {
 		});
 
 	Object.keys(options).forEach((key) => {
-		if (!(key in defaultOptions)) throw new FloatToolkit.ConfigError(`FloatToolkit does not support the option ${key}.`);
+		if (!(key in defaultOptions)) throw new FloatToolkitError(`FloatToolkit does not support the option ${key}.`);
 
 		const optionType = typeof options[key as FloatToolkit.OptionLabel];
 		const expectedType = typeof defaultOptions[key as FloatToolkit.OptionLabel];
 
-		if (optionType !== expectedType) throw new FloatToolkit.ConfigError(`${key} must be a property of type '${expectedType}'.`);
+		if (optionType !== expectedType) throw new FloatToolkitError(`${key} must be a property of type '${expectedType}'.`);
 	});
 }

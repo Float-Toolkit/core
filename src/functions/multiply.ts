@@ -1,9 +1,9 @@
-import FloatToolkit from "../index.js";
+import FloatToolkit from "..";
 
-import { extractFirstNumber } from "./extractFirstNumber.js";
-import { multiplyArrayItem } from "./multiplyArrayItem.js";
+import { extractFirstNumber } from "./extractFirstNumber";
+import { multiplyArrayItem } from "./multiplyArrayItem";
 
-import { validateNumbersArray } from "../eval/validateNumbersArray.js";
+import { validateNumbersArray } from "../eval/validateNumbersArray";
 
 /**
  * @internal

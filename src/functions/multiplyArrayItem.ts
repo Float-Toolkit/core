@@ -1,8 +1,8 @@
-import FloatToolkit from "../index.js";
+import FloatToolkit from "..";
 
-import { round } from "./round.js";
+import { round } from "./round";
 
-import { precisionsSum } from "../get-precision/precisionsSum.js";
+import { precisionsSum } from "../get-precision/precisionsSum";
 
 /**
  * @internal

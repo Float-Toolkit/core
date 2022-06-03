@@ -15,8 +15,9 @@ const config = {
 	globals: {
 		"ts-jest": {
 			tsconfig: "tsconfig.test.json",
+			useESM: true,
 		},
 	},
 };
 
-export default config;
+module.exports = config;

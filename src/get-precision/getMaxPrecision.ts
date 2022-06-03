@@ -1,6 +1,6 @@
-import FloatToolkit from "../index.js";
+import FloatToolkit from "..";
 
-import { getPrecision } from "./getPrecision.js";
+import { getPrecision } from "./getPrecision";
 
 /**
  * @internal

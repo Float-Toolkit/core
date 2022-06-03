@@ -18,7 +18,10 @@
 /.vscode
 .editorconfig
 .prettierignore
+
+# TSConfig
 tsconfig.json
+tsconfig.test.json
 
 # Firebase
 .firebase

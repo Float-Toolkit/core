@@ -6,7 +6,7 @@
 		"emitDecoratorMetadata": true,
 		"useDefineForClassFields": true,
 
-		"module": "esnext",
+		"module": "commonjs",
 		"rootDir": "./src/",
 		"moduleResolution": "node",
 		"types": ["node"],
@@ -28,6 +28,7 @@
 		"strictBindCallApply": true,
 		"strictPropertyInitialization": true,
 		"noImplicitThis": true,
+		"useUnknownInCatchVariables": true,
 		"alwaysStrict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,

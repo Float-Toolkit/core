@@ -1,6 +1,6 @@
-import { isNumbersArray } from "./isNumbersArray.js";
+import { isNumbersArray } from "./isNumbersArray";
 
-import { throwNumbersError } from "../errors/throwNumbersError.js";
+import { throwNumbersError } from "../errors/throwNumbersError";
 
 /**
  * @internal

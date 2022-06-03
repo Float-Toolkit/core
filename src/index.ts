@@ -1,17 +1,17 @@
 // @ts-ignore
 import PackageJSON from "../package.json";
 
-import { precisionRange } from "./precisionRange.js";
-import { defaultOptions } from "./defaultOptions.js";
+import { precisionRange } from "./precisionRange";
+import { defaultOptions } from "./defaultOptions";
 
-import { isValidPrecision } from "./eval/isValidPrecision.js";
-import { validateOptions } from "./eval/validateOptions.js";
+import { isValidPrecision } from "./eval/isValidPrecision";
+import { validateOptions } from "./eval/validateOptions";
 
-import { round } from "./functions/round.js";
-import { add } from "./functions/add.js";
-import { subtract } from "./functions/subtract.js";
-import { multiply } from "./functions/multiply.js";
-import { divide } from "./functions/divide.js";
+import { round } from "./functions/round";
+import { add } from "./functions/add";
+import { subtract } from "./functions/subtract";
+import { multiply } from "./functions/multiply";
+import { divide } from "./functions/divide";
 import { getVersionNumber } from "./functions/getVersionNumber";
 
 /**
@@ -256,17 +256,6 @@ namespace FloatToolkit {
 			return getVersionNumber(PackageJSON.version, 2);
 		},
 	};
-
-	/**
-	 * @internal
-	 */
-	export class ConfigError extends Error {
-		constructor(message?: string) {
-			super(message);
-		}
-
-		override name = "FloatToolkit.ConfigError";
-	}
 }
 
-export default FloatToolkit;
+export = FloatToolkit;

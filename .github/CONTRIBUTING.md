@@ -4,7 +4,7 @@
 
 <h1 align="center">Contribution guidelines</h1>
 
-If you wish to contribute to the Float Toolkit source code, feel free to fork the repository and submit a pull request.
+If you wish to contribute to the **Float Toolkit** source code, feel free to fork the repository and submit a pull request.
 
 ## Steps
 
