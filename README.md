@@ -8,7 +8,9 @@
 
 [![NPM latest version](https://img.shields.io/npm/v/@float-toolkit/core?label=version&logo=npm)](https://www.npmjs.com/package/@float-toolkit/core)
 [![NPM downloads](https://img.shields.io/npm/dt/@float-toolkit/core?logo=npm)](https://www.npmjs.com/package/@float-toolkit/core)
+[![Tests status](https://img.shields.io/github/workflow/status/float-toolkit/core/Test%20with%20Jest?label=tests&logo=jest)](https://github.com/float-toolkit/core/actions/workflows/testWithJest.yml)
 [![Code coverage with Codecov](https://img.shields.io/codecov/c/github/float-toolkit/core/tests?logo=codecov&logoColor=white)](https://codecov.io/gh/float-toolkit/core)
+[![Contributor Covenant Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-5e0d73)](https://github.com/float-toolkit/core/blob/master/.github/CODE-OF-CONDUCT.md)
 
 </div>
 

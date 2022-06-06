@@ -3,9 +3,8 @@ name: Upload documentation
 on:
   push:
     branches:
-      - "stable"
-    tags:
-      - "**"
+      - stable
+
   workflow_dispatch:
 
 jobs:

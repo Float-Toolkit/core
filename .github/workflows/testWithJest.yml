@@ -2,10 +2,8 @@ name: Test with Jest
 
 on:
   push:
-    branches:
-      - "**"
-    tags:
-      - "**"
+    branches-ignore:
+      - stable
 
   workflow_dispatch:
 
