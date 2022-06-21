@@ -32,7 +32,7 @@ You can round floats down to any number of digits, and perform accurate math ope
 
 To add Float Toolkit to your Node.js project, run this command:
 
-```sh-session
+```bash
 npm install @float-toolkit/core
 ```
 

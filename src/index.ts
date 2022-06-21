@@ -232,13 +232,34 @@ namespace FloatToolkit {
 	 */
 	export type FirstNumberExtractedArray = [number | undefined, number[]];
 
-	interface Version {
+	/**
+	 * An object containing the package version.
+	 */
+	export interface Version {
+		/**
+		 * The full version number (M.m.P)
+		 */
 		get full(): string;
+
+		/**
+		 * The major version (first number)
+		 */
 		get major(): string;
+
+		/**
+		 * The minor version (second number)
+		 */
 		get minor(): string;
+
+		/**
+		 * The patch version (third number)
+		 */
 		get patch(): string;
 	}
 
+	/**
+	 * Contains the package's major, minor and patch version numbers.
+	 */
 	export const VERSION: Version = {
 		get full() {
 			return PackageJSON.version;
