@@ -45,22 +45,6 @@ body:
       required: true
 
   - type: textarea
-    id: description
-
-    attributes:
-      label: Description
-      description: |
-        Please describe the suggestion in as much detail as possible.
-        You can also attach images or text files here.
-      placeholder: |
-        This new feature would be very welcome...
-        The lack of ___ is frustrating...
-        ___ should behave like this instead...
-
-    validations:
-      required: true
-
-  - type: textarea
     id: example-use-cases
 
     attributes:
