@@ -1,0 +1,94 @@
+name: Documentation Issue
+description: Is there something wrong or missing in the documentation?
+
+title: DOCS - (brief description)
+labels:
+  - 📄 Documentation
+assignees: LuisFerLCC
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        <div align="center" style="margin-bottom: 0.5rem">
+        <img src="https://raw.githubusercontent.com/float-toolkit/core/HEAD/media/ftlogo.svg" width="50" />
+        </div>
+
+        <h1 align="center">Documentation Issue</h1>
+
+  - type: input
+    id: url
+
+    attributes:
+      label: URL to the affected page
+      placeholder: https://float-toolkit.web.app/classes/FloatToolkit.html
+
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+
+    attributes:
+      label: Description
+      description: Please describe the issue in as much detail as possible. You can also attach images here.
+      placeholder: |
+        This method needs documentation...
+        The website has a faulty link...
+
+    validations:
+      required: true
+
+  - type: textarea
+    id: how-to-reproduce
+
+    attributes:
+      label: How to reproduce
+      description: If this is a website bug, please describe how to reproduce it.
+      placeholder: |
+        Steps to reproduce:
+        1.
+        2.
+        3.
+        ...
+
+  - type: textarea
+    id: expected-behavior
+
+    attributes:
+      label: Expected behavior
+
+  - type: textarea
+    id: actual-behavior
+
+    attributes:
+      label: Actual behavior
+
+  - type: dropdown
+    id: priority
+
+    attributes:
+      label: Priority
+      description: How critical is this issue? (please be realistic)
+
+      options:
+        - Minor (not crucially broken)
+        - Medium (needs attention)
+        - Major (must be fixed immediately)
+
+  - type: checkboxes
+    id: contribution-guidelines
+
+    attributes:
+      label: Contribution guidelines
+      description: By submitting this issue, you agree that...
+
+      options:
+        - label: The issue has not already been reported.
+          required: true
+
+        - label: The issue is not already being worked on.
+          required: true
+
+        - label: You are following the project's [Code of Conduct](https://github.com/float-toolkit/core/blob/master/.github/CODE_OF_CONDUCT.md).
+          required: true
