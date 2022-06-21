@@ -76,6 +76,9 @@ body:
         - Medium (needs attention)
         - Major (must be fixed immediately)
 
+    validations:
+      required: true
+
   - type: checkboxes
     id: contribution-guidelines
 
@@ -84,11 +87,11 @@ body:
       description: By submitting this issue, you agree that...
 
       options:
+        - label: This is a documentation issue, not you [asking for support](https://github.com/float-toolkit/core/discussions/categories/q-a).
+          required: true
+
         - label: The issue has not already been reported.
           required: true
 
-        - label: The issue is not already being worked on.
-          required: true
-
-        - label: You are following the project's [Code of Conduct](https://github.com/float-toolkit/core/blob/master/.github/CODE_OF_CONDUCT.md).
+        - label: You are following the project's [Code of Conduct](https://github.com/float-toolkit/core/blob/master/.github/CODE_OF_CONDUCT.md) and [contribution guidelines](https://github.com/float-toolkit/core/blob/master/.github/CONTRIBUTING.md).
           required: true

@@ -6,5 +6,5 @@ contact_links:
     about: Please check the documentation before filing new issues.
 
   - name: Support
-    url: https://github.com/float-toolkit/core/discussions
+    url: https://github.com/float-toolkit/core/discussions/categories/q-a
     about: Need help? Ask on GitHub discussions!

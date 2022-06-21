@@ -70,6 +70,9 @@ body:
       description: By submitting this issue, you agree that...
 
       options:
+        - label: This is a suggestion, not you [asking for support](https://github.com/float-toolkit/core/discussions/categories/q-a).
+          required: true
+
         - label: You have read the [documentation](https://float-toolkit.web.app/) and made sure this is not already implemented.
           required: true
 
@@ -82,5 +85,5 @@ body:
         - label: This feature fits with Float Toolkit's philosophy and goals.
           required: true
 
-        - label: You are following the project's [Code of Conduct](https://github.com/float-toolkit/core/blob/master/.github/CODE_OF_CONDUCT.md).
+        - label: You are following the project's [Code of Conduct](https://github.com/float-toolkit/core/blob/master/.github/CODE_OF_CONDUCT.md) and [contribution guidelines](https://github.com/float-toolkit/core/blob/master/.github/CONTRIBUTING.md).
           required: true
