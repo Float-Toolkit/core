@@ -105,3 +105,7 @@
 - name: 🗑️ Won't fix
   description: This will not be worked on
   color: "ffffff"
+
+- name: 🆗 Working as intended
+  description: This is the intended behavior
+  color: "ebd534"

@@ -3,7 +3,7 @@ name: Sync issue/PR labels
 on:
   push:
     branches:
-      - master
+      - "*"
 
     paths:
       - .github/labels.yml

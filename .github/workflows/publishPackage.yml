@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build package
+    name: Build package and documentation
     runs-on: ubuntu-latest
     if: github.repository_owner == 'float-toolkit'
 
@@ -21,7 +21,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: npm run buildWithDocs
 
       - name: Upload dist artifact
         uses: actions/upload-artifact@v3
@@ -34,6 +34,12 @@ jobs:
         with:
           name: typings
           path: typings
+
+      - name: Upload documentation artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: docs
+          path: docs
 
   publish:
     name: Publish on NPM and GitHub Packages
@@ -71,3 +77,26 @@ jobs:
           registry: https://npm.pkg.github.com/
           token: ${{ secrets.GITHUB_TOKEN }}
           check-version: false
+
+  upload:
+    name: Upload documentation
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download documentation artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: docs
+          path: docs
+
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@v2.0.0
+        with:
+          args: deploy
+
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
