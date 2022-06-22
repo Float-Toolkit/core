@@ -7,6 +7,10 @@
 /.github
 .gitignore
 
+# testing and coverage
+jest.config.js
+/coverage
+
 # IDEs and editors
 /.idea
 .project

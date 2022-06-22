@@ -8,3 +8,6 @@
 
 # testing and coverage
 /coverage
+
+# Firebase
+.firebase

@@ -6,15 +6,15 @@
 
 # Float Toolkit
 
-[![NPM latest version](https://img.shields.io/npm/v/@float-toolkit/core?label=version&logo=npm)](https://www.npmjs.com/package/@float-toolkit/core)
-[![NPM downloads](https://img.shields.io/npm/dt/@float-toolkit/core?logo=npm)](https://www.npmjs.com/package/@float-toolkit/core)
+[![NPM latest version](https://img.shields.io/npm/v/@float-toolkit/core?label=version&logo=npm)](https://npmjs.com/package/@float-toolkit/core)
+[![NPM downloads](https://img.shields.io/npm/dt/@float-toolkit/core?logo=npm)](https://npmjs.com/package/@float-toolkit/core)
 [![Tests status](https://img.shields.io/github/workflow/status/float-toolkit/core/Test%20with%20Jest?label=tests&logo=jest)](https://github.com/float-toolkit/core/actions/workflows/testWithJest.yml)
 [![Code coverage with Codecov](https://img.shields.io/codecov/c/github/float-toolkit/core/tests?logo=codecov&logoColor=white)](https://codecov.io/gh/float-toolkit/core)
-[![Contributor Covenant Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-5e0d73)](https://github.com/float-toolkit/core/blob/master/.github/CODE-OF-CONDUCT.md)
+[![Contributor Covenant Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-5e0d73)](https://github.com/float-toolkit/core/blob/master/.github/CODE_OF_CONDUCT.md)
 
 </div>
 
-**Float Toolkit** is a lightweight, dependency-less [Node.js](https://nodejs.org) package that allows you to work with _floats_ ([floating-point numbers](https://en.wikipedia.org/wiki/Floating-point_arithmetic), or numbers with decimals).
+**Float Toolkit** is a lightweight, dependency-less [NPM](https://npmjs.com) package that allows you to work with _floats_ ([floating-point numbers](https://en.wikipedia.org/wiki/Floating-point_arithmetic), or numbers with decimals).
 
 You can round floats down to any number of digits, and perform accurate math operations (addition, subtraction, multiplication and division) with them.
 
@@ -24,13 +24,14 @@ You can round floats down to any number of digits, and perform accurate math ope
 -   Round floats to any number of digits
 -   No dependencies
 -   TypeScript type declarations
+-   Compatible with browsers and [Node.js](https://nodejs.org)
 -   \> 95% code coverage
 
 ## Get started
 
 ### Installation
 
-To add Float Toolkit to your Node.js project, run this command:
+To add Float Toolkit to your project, run this command:
 
 ```bash
 npm install @float-toolkit/core
@@ -38,16 +39,12 @@ npm install @float-toolkit/core
 
 ### Usage
 
-The package export is a `class` called `FloatToolkit`. Once you import it, you can create multiple `FloatToolkit` instances.
+The package export is a class called `FloatToolkit`. Once you import it, you can create multiple `FloatToolkit` instances.
 
 ```js
 import FloatToolkit from "@float-toolkit/core";
 const ft = new FloatToolkit();
-```
 
-You are now ready to use Float Toolkit.
-
-```js
 console.log(0.1 + 0.2); // 0.30000000000000004
 console.log(ft.round(0.1 + 0.2)); // 0.3
 console.log(ft.add([0.1, 0.2])); // 0.3
@@ -59,7 +56,7 @@ console.log(ft.add([0.1, 0.2])); // 0.3
 	<img src="https://raw.githubusercontent.com/float-toolkit/core/HEAD/media/tsftlogo.svg" width="50" />
 </div>
 
-Float Toolkit is written in [TypeScript](https://www.typescriptlang.org/). As such, the package is fully compatible with TypeScript projects. All of the type aliases and interfaces can be imported into your project.
+Float Toolkit is written in [TypeScript](https://typescriptlang.org). As such, you will have full type checking in your TypeScript projects. The `FloatToolkit` class also serves as a namespace containing the type definitions used by the package.
 
 #### Example:
 
@@ -103,16 +100,21 @@ const result = ft.add([0.1, 0.2]); // 0.3
 console.log(result === 0.3); // true
 ```
 
+## Support
+
+Need help using Float Toolkit? Don't hesitate to reach out on [GitHub Discussions](https://github.com/float-toolkit/core/discussions/categories/q-a)!
+
 ## Links
 
--   [Documentation](https://float-toolkit.web.app/)
+-   [Documentation](https://float-toolkit.web.app)
 -   [GitHub](https://github.com/float-toolkit/core)
--   [npm](https://www.npmjs.com/package/@float-toolkit/core)
+-   [npm](https://npmjs.com/package/@float-toolkit/core)
 
 ## Contributing
 
 Before creating an issue, please consider the following:
 
--   Refer to the [documentation](https://float-toolkit.web.app/) to make sure the error is actually a bug and not a mistake of your own.
+-   Refer to the [documentation](https://float-toolkit.web.app) to make sure the error is actually a bug and not a mistake of your own.
 -   Make sure the issue hasn't already been reported or suggested.
--   After following these steps, you can read the [contribution guidelines](https://github.com/float-toolkit/core/blob/master/.github/CONTRIBUTING.md) and follow the steps to submit a PR.
+-   After following these steps, you can file an issue using one of our [templates](https://github.com/float-toolkit/core/issues/new/choose). Please make sure to follow our [Code of Conduct](https://github.com/float-toolkit/core/blob/master/.github/CODE_OF_CONDUCT.md).
+-   If you wish to [submit a pull request](https://github.com/float-toolkit/core/compare) alongside your issue, please follow our [contribution guidelines](https://github.com/float-toolkit/core/blob/master/.github/CONTRIBUTING.md) .

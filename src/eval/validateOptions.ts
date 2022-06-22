@@ -1,6 +1,6 @@
 import FloatToolkit from "..";
-
 import { defaultOptions } from "../defaultOptions";
+
 import { FloatToolkitError } from "../errors/FloatToolkitError";
 
 /**

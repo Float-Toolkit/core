@@ -1,6 +1,5 @@
 name: Feature Request
 description: Do you have a suggestion or an idea for a new feature?
-
 title: SUGGESTION - (brief description)
 labels:
   - ✨ Enhancement
@@ -18,19 +17,16 @@ body:
 
   - type: dropdown
     id: targeted-packages
-
     attributes:
       label: Targeted packages
       description: Which packages should have this new feature / be considered?
       multiple: true
-
       options:
         - "@float-toolkit/core"
         - "@float-toolkit/react"
 
   - type: textarea
     id: description
-
     attributes:
       label: Description
       description: |
@@ -40,50 +36,39 @@ body:
         This new feature would be very welcome...
         The lack of ___ is frustrating...
         ___ should behave like this instead...
-
     validations:
       required: true
 
   - type: textarea
     id: example-use-cases
-
     attributes:
       label: Example use cases
       description: When and where would this feature be useful?
       placeholder: This would be useful in situations where...
-
     validations:
       required: true
 
   - type: textarea
     id: other-alternatives
-
     attributes:
       label: Other alternatives
       description: Have you considered any other possible approaches?
 
   - type: checkboxes
     id: contribution-guidelines
-
     attributes:
       label: Contribution guidelines
       description: By submitting this issue, you agree that...
-
       options:
         - label: This is a suggestion, not you [asking for support](https://github.com/float-toolkit/core/discussions/categories/q-a).
           required: true
-
-        - label: You have read the [documentation](https://float-toolkit.web.app/) and made sure this is not already implemented.
+        - label: You have read the [documentation](https://float-toolkit.web.app) and made sure this is not already implemented.
           required: true
-
         - label: The issue has not already been suggested.
           required: true
-
         - label: This new feature will not break any existing code.
           required: true
-
         - label: This feature fits with Float Toolkit's philosophy and goals.
           required: true
-
         - label: You are following the project's [Code of Conduct](https://github.com/float-toolkit/core/blob/master/.github/CODE_OF_CONDUCT.md) and [contribution guidelines](https://github.com/float-toolkit/core/blob/master/.github/CONTRIBUTING.md).
           required: true
