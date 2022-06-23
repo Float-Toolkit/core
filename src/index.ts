@@ -1,18 +1,18 @@
 // @ts-ignore
-import PackageJSON from "../package.json";
+import PackageJSON from "../package.json" assert { type: "json" };
 
-import { precisionRange } from "./precisionRange";
-import { defaultOptions } from "./defaultOptions";
+import { precisionRange } from "./precisionRange.js";
+import { defaultOptions } from "./defaultOptions.js";
 
-import { isValidPrecision } from "./eval/isValidPrecision";
-import { validateOptions } from "./eval/validateOptions";
+import { isValidPrecision } from "./eval/isValidPrecision.js";
+import { validateOptions } from "./eval/validateOptions.js";
 
-import { round } from "./functions/round";
-import { add } from "./functions/add";
-import { subtract } from "./functions/subtract";
-import { multiply } from "./functions/multiply";
-import { divide } from "./functions/divide";
-import { getVersionNumber } from "./functions/getVersionNumber";
+import { round } from "./functions/round.js";
+import { add } from "./functions/add.js";
+import { subtract } from "./functions/subtract.js";
+import { multiply } from "./functions/multiply.js";
+import { divide } from "./functions/divide.js";
+import { getVersionNumber } from "./functions/getVersionNumber.js";
 
 /**
  * A FloatToolkit contains methods to round floats and perform accurate math operations with them.
@@ -279,4 +279,4 @@ namespace FloatToolkit {
 	};
 }
 
-export = FloatToolkit;
+export default FloatToolkit;

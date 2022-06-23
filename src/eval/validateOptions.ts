@@ -1,7 +1,7 @@
-import FloatToolkit from "..";
-import { defaultOptions } from "../defaultOptions";
+import FloatToolkit from "../index.js";
+import { defaultOptions } from "../defaultOptions.js";
 
-import { FloatToolkitError } from "../errors/FloatToolkitError";
+import { FloatToolkitError } from "../errors/FloatToolkitError.js";
 
 /**
  * @internal

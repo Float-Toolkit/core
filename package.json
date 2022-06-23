@@ -1,18 +1,17 @@
 {
 	"name": "@float-toolkit/core",
 	"version": "2.0.0",
-	"description": "Float Toolkit is a Node.js package for working with floating-point numbers.",
+	"description": "Float Toolkit is an NPM package for working with floating-point numbers.",
 	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
+	"type": "module",
 	"types": "./typings/index.d.ts",
 	"exports": {
 		".": {
-			"require": "./dist/index.js",
-			"import": "./dist/index.mjs"
+			"import": "./dist/index.js"
 		}
 	},
 	"scripts": {
-		"build": "rm -rf dist typings && npm run format && npm test && tsc && gen-esm-wrapper dist dist/index.mjs",
+		"build": "rm -rf dist typings && npm run format && npm test && tsc && node dist/index.js",
 		"format": "prettier --write .",
 		"docs": "rm -rf docs && npm run format && npm test && typedoc",
 		"buildWithDocs": "rm -rf docs && npm run build && typedoc",
@@ -30,8 +29,7 @@
 		"round",
 		"math",
 		"no-dependencies",
-		"dependency-less",
-		"Node.js"
+		"dependency-less"
 	],
 	"author": "LuisFerLCC",
 	"license": "Apache-2.0",
@@ -41,7 +39,6 @@
 	"homepage": "https://float-toolkit.web.app/",
 	"devDependencies": {
 		"@types/node": "^17.0.35",
-		"gen-esm-wrapper": "^1.1.3",
 		"jest": "^28.1.0",
 		"jest-ts-webcompat-resolver": "^1.0.0",
 		"prettier": "^2.6.2",

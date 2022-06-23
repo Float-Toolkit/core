@@ -6,10 +6,9 @@
 		"emitDecoratorMetadata": true,
 		"useDefineForClassFields": true,
 
-		"module": "commonjs",
+		"module": "esnext",
 		"rootDir": "./src/",
 		"moduleResolution": "node",
-		"types": ["node"],
 		"resolveJsonModule": true,
 
 		"declaration": true,

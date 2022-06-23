@@ -1,8 +1,8 @@
-import FloatToolkit from "..";
+import FloatToolkit from "../index.js";
 
-import { addArrayItem } from "./addArrayItem";
+import { addArrayItem } from "./addArrayItem.js";
 
-import { validateNumbersArray } from "../eval/validateNumbersArray";
+import { validateNumbersArray } from "../eval/validateNumbersArray.js";
 
 /**
  * @internal

@@ -117,4 +117,4 @@ Before creating an issue, please consider the following:
 -   Refer to the [documentation](https://float-toolkit.web.app) to make sure the error is actually a bug and not a mistake of your own.
 -   Make sure the issue hasn't already been reported or suggested.
 -   After following these steps, you can file an issue using one of our [templates](https://github.com/float-toolkit/core/issues/new/choose). Please make sure to follow our [Code of Conduct](https://github.com/float-toolkit/core/blob/master/.github/CODE_OF_CONDUCT.md).
--   If you wish to [submit a pull request](https://github.com/float-toolkit/core/compare) alongside your issue, please follow our [contribution guidelines](https://github.com/float-toolkit/core/blob/master/.github/CONTRIBUTING.md) .
+-   If you wish to [submit a pull request](https://github.com/float-toolkit/core/compare) alongside your issue, please follow our [contribution guidelines](https://github.com/float-toolkit/core/blob/master/.github/CONTRIBUTING.md).
