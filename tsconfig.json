@@ -9,6 +9,7 @@
 		"module": "esnext",
 		"rootDir": "./src/",
 		"moduleResolution": "node",
+		"types": [],
 		"resolveJsonModule": true,
 
 		"declaration": true,
