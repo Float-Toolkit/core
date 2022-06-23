@@ -15,6 +15,7 @@ describe("FloatToolkit.multiply()", () => {
 		expect(ft.multiply([0.1, 0.9])).toBe(0.09);
 
 		expect(ft.multiply([2022.1, 0.7])).toBe(1415.47);
+		expect(ft.multiply([2.9e31, 3.1e31])).toBe(8.99e62);
 	});
 
 	it("should round to the default precision if and only if specified in the options", () => {
@@ -52,6 +53,7 @@ describe("FloatToolkit.divide()", () => {
 		expect(ft.divide([0.09, 0.9])).toBe(0.1);
 
 		expect(ft.divide([1415.47, 0.7])).toBe(2022.1);
+		expect(ft.divide([8.99e62, 3.1e31])).toBe(2.9e31);
 
 		ft.defaultPrecision = 17;
 		expect(ft.divide([0.09, 0.9])).toBe(0.09999999999999999);
