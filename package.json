@@ -11,11 +11,11 @@
 		}
 	},
 	"scripts": {
-		"build": "node scripts/versionSync.js && rm -rf dist typings && npm run format && npm test && tsc",
+		"build": "rm -rf dist typings && npm run format && npm test && tsc",
 		"format": "prettier --write .",
 		"docs": "rm -rf docs && npm run format && npm test && typedoc",
 		"buildWithDocs": "rm -rf docs && npm run build && typedoc",
-		"test": "rm -rf coverage && jest",
+		"test": "rm -rf coverage && node scripts/versionSync.js && jest",
 		"testWatch": "jest --watch"
 	},
 	"repository": {
