@@ -3,6 +3,7 @@
 
 # source and docs
 /src
+/scripts
 /docs
 /.github
 .gitignore

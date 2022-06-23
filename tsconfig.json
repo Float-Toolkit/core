@@ -10,7 +10,6 @@
 		"rootDir": "./src/",
 		"moduleResolution": "node",
 		"types": [],
-		"resolveJsonModule": true,
 
 		"declaration": true,
 		"outDir": "./dist/",
@@ -39,7 +38,7 @@
 		"skipLibCheck": true
 	},
 
-	"include": ["./src/**/*.ts", "./package.json"],
+	"include": ["./src/**/*.ts"],
 	"exclude": ["./src/__tests__/**/*.ts"],
 
 	"typedocOptions": {
