@@ -3,17 +3,6 @@
 
 	"tasks": [
 		{
-			"label": "TypeScript: Watch Mode",
-
-			"type": "typescript",
-			"tsconfig": "tsconfig.json",
-			"option": "watch",
-
-			"isBackground": true,
-			"group": "build"
-		},
-
-		{
 			"label": "Jest: Test",
 
 			"type": "npm",
@@ -79,6 +68,15 @@
 		},
 
 		{
+			"label": "NPM: Link local dependencies",
+
+			"type": "shell",
+			"command": "npm link ${input:localPackages}",
+
+			"problemMatcher": []
+		},
+
+		{
 			"label": "NPM: Install dependencies",
 
 			"type": "shell",
@@ -128,6 +126,12 @@
 		{
 			"id": "packages",
 			"description": "Dependencies to install",
+			"type": "promptString"
+		},
+
+		{
+			"id": "localPackages",
+			"description": "Local dependencies to install",
 			"type": "promptString"
 		},
 

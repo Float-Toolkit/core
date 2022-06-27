@@ -13,7 +13,7 @@ function allSourceFilesInDir(path: string) {
 it("should include a .js file extension in all source files", () => {
 	allSourceFilesInDir("src").forEach((filename) => {
 		const content = readFileSync(filename).toString();
-		const importStatements = content.split("\r\n").filter((line) => line.match(/^import (\{ )?[\w, ]+( \})? from ".+";$/));
+		const importStatements = content.split("\r\n").filter((line) => line.match(/^import (\{ )?[\w, ]+( \})? from "\..+";$/));
 
 		const allHaveExtension = importStatements.every((line) => {
 			if (line.endsWith('.js";')) return true;

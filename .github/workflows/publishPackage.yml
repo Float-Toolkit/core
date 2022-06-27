@@ -29,12 +29,6 @@ jobs:
           name: dist
           path: dist
 
-      - name: Upload typings artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: typings
-          path: typings
-
       - name: Upload documentation artifact
         uses: actions/upload-artifact@v3
         with:
@@ -55,12 +49,6 @@ jobs:
         with:
           name: dist
           path: dist
-
-      - name: Download typings artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: typings
-          path: typings
 
       - name: Publish on NPM
         uses: JS-DevTools/npm-publish@v1.4.3

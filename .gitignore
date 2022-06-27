@@ -3,7 +3,6 @@
 
 # production and docs
 /dist
-/typings
 /docs
 
 # testing and coverage
@@ -24,7 +23,6 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-!.vscode/*.code-snippets
 .history/*
 
 # misc

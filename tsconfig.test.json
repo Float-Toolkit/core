@@ -6,7 +6,9 @@
 		"resolveJsonModule": true,
 
 		"declaration": false,
-		"declarationDir": null
+		"declarationDir": null,
+
+		"typeRoots": ["./node_modules/@types"]
 	},
 
 	"include": ["./src/__tests__/**/*.ts", "./package.json"],
