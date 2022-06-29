@@ -2,13 +2,12 @@ import FloatToolkit from "../../..";
 
 import { errorMessages } from "../../__mocks__/errorMessages";
 
+let ft: FloatToolkit;
+beforeEach(() => {
+	ft = new FloatToolkit();
+});
+
 describe("FloatToolkit.add()", () => {
-	let ft: FloatToolkit;
-
-	beforeEach(() => {
-		ft = new FloatToolkit();
-	});
-
 	it("should add the provided numbers and choose the best precision for the result", () => {
 		expect(ft.add([])).toBe(0);
 		expect(ft.add([0.1])).toBe(0.1);
@@ -42,12 +41,6 @@ describe("FloatToolkit.add()", () => {
 });
 
 describe("FloatToolkit.subtract()", () => {
-	let ft: FloatToolkit;
-
-	beforeEach(() => {
-		ft = new FloatToolkit();
-	});
-
 	it("should subtract the provided numbers from the first one and choose the best precision for the result", () => {
 		expect(ft.subtract([])).toBe(0);
 		expect(ft.subtract([0.8])).toBe(0.8);

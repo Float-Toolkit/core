@@ -2,13 +2,12 @@ import FloatToolkit from "../../..";
 
 import { errorMessages } from "../../__mocks__/errorMessages";
 
+let ft: FloatToolkit;
+beforeEach(() => {
+	ft = new FloatToolkit();
+});
+
 describe("FloatToolkit.multiply()", () => {
-	let ft: FloatToolkit;
-
-	beforeEach(() => {
-		ft = new FloatToolkit();
-	});
-
 	it("should multiply the provided numbers and choose the best precision for the result", () => {
 		expect(ft.multiply([])).toBe(0);
 		expect(ft.multiply([0.1])).toBe(0.1);
@@ -41,12 +40,6 @@ describe("FloatToolkit.multiply()", () => {
 });
 
 describe("FloatToolkit.divide()", () => {
-	let ft: FloatToolkit;
-
-	beforeEach(() => {
-		ft = new FloatToolkit();
-	});
-
 	it("should divide the first number by the following ones and round them to the default precision", () => {
 		expect(ft.divide([])).toBe(0);
 		expect(ft.divide([0.09])).toBe(0.09);

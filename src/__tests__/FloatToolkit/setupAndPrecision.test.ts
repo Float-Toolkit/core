@@ -5,27 +5,29 @@ import { isValidPrecision } from "../../eval/isValidPrecision";
 
 import { errorMessages } from "../__mocks__/errorMessages";
 
+let ft: FloatToolkit;
+beforeEach(() => {
+	ft = new FloatToolkit();
+});
+
 describe("FloatToolkit.constructor", () => {
-	let ft: FloatToolkit;
-
-	beforeEach(() => {
-		ft = new FloatToolkit();
-	});
-
 	it("should create an instance with the default options", () => {
 		expect(ft).toBeTruthy();
 
 		expect(ft.defaultPrecision).toBe(10);
-		expect(ft.options).toEqual<FloatToolkit.Options>(defaultOptions);
+		expect(ft.options).toEqual(defaultOptions);
 	});
 
 	it("should create an instance with custom options", () => {
-		ft = new FloatToolkit(5, {
+		const precision = 5;
+		const options: FloatToolkit.Options = {
 			forceUseDefaultPrecision: true,
-		});
+		};
 
-		expect(ft.defaultPrecision).toBe(5);
-		expect(ft.options.forceUseDefaultPrecision).toBe(true);
+		ft = new FloatToolkit(precision, options);
+
+		expect(ft.defaultPrecision).toBe(precision);
+		expect(ft.options).toEqual<FloatToolkit.Options>({ ...defaultOptions, ...options });
 	});
 
 	it("should throw an error for invalid arguments", () => {
@@ -43,12 +45,6 @@ describe("FloatToolkit.constructor", () => {
 });
 
 describe("FloatToolkit.defaultPrecision", () => {
-	let ft: FloatToolkit;
-
-	beforeEach(() => {
-		ft = new FloatToolkit();
-	});
-
 	it("should return a valid FloatToolkit.Precision value", () => {
 		expect(ft.defaultPrecision).toBeDefined();
 		expect(isValidPrecision(ft.defaultPrecision)).toBe(true);

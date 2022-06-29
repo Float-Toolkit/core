@@ -5,22 +5,23 @@ import { validateOptions } from "../../eval/validateOptions";
 
 import { errorMessages } from "../__mocks__/errorMessages";
 
+let ft: FloatToolkit;
+beforeEach(() => {
+	ft = new FloatToolkit();
+});
+
 describe("FloatToolkit.options", () => {
 	it("should return a valid frozen FloatToolkit.Options object", () => {
-		const ft = new FloatToolkit();
-
 		expect(() => validateOptions(ft.options, true)).not.toThrow();
 		expect(Object.isFrozen(ft.options)).toBe(true);
 	});
 });
 
 describe("FloatToolkit.setOptions()", () => {
-	let ft: FloatToolkit;
 	let prevOptions: Readonly<FloatToolkit.Options>;
 	let returnedOptions: Readonly<FloatToolkit.Options>;
 
 	beforeEach(() => {
-		ft = new FloatToolkit();
 		prevOptions = ft.options;
 		returnedOptions = ft.setOptions({
 			forceUseDefaultPrecision: true,
@@ -28,7 +29,8 @@ describe("FloatToolkit.setOptions()", () => {
 	});
 
 	it("should modify the FloatToolkit's options", () => {
-		expect(ft.options).toEqual({ ...prevOptions, forceUseDefaultPrecision: true });
+		expect(returnedOptions).toEqual<FloatToolkit.Options>({ ...prevOptions, forceUseDefaultPrecision: true });
+		expect(ft.options).toEqual(returnedOptions);
 	});
 
 	it("should return a valid frozen FloatToolkit.Options object", () => {
@@ -43,18 +45,17 @@ describe("FloatToolkit.setOptions()", () => {
 });
 
 describe("FloatToolkit.resetOptions()", () => {
-	let ft: FloatToolkit;
 	let returnedOptions: Readonly<FloatToolkit.Options>;
 
 	beforeEach(() => {
-		ft = new FloatToolkit();
 		returnedOptions = ft.resetOptions({
 			forceUseDefaultPrecision: true,
 		});
 	});
 
 	it("should reset and modify the FloatToolkit's options", () => {
-		expect(ft.options).toEqual({ ...defaultOptions, forceUseDefaultPrecision: true });
+		expect(returnedOptions).toEqual<FloatToolkit.Options>({ ...defaultOptions, forceUseDefaultPrecision: true });
+		expect(ft.options).toEqual(returnedOptions);
 	});
 
 	it("should return a valid frozen FloatToolkit.Options object", () => {
