@@ -15,6 +15,7 @@
 		"outDir": "./dist/",
 		"stripInternal": true,
 		"noEmitOnError": true,
+		"declarationDir": "./typings/",
 
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,

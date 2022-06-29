@@ -3,6 +3,7 @@
 
 # production and docs
 /dist
+/typings
 /docs
 
 # testing and coverage

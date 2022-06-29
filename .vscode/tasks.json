@@ -131,7 +131,7 @@
 
 		{
 			"id": "localPackages",
-			"description": "Local dependencies to install",
+			"description": "Local dependencies to link",
 			"type": "promptString"
 		},
 
