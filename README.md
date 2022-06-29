@@ -110,6 +110,10 @@ Need help using Float Toolkit? Don't hesitate to reach out on [GitHub Discussion
 -   [GitHub](https://github.com/float-toolkit/core)
 -   [npm](https://npmjs.com/package/@float-toolkit/core)
 
+## Child packages
+
+-   [Float Toolkit for React](https://npmjs.com/package/@float-toolkit/react)
+
 ## Contributing
 
 Before creating an issue, please consider the following:
