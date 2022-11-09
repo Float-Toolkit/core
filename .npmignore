@@ -7,6 +7,8 @@
 /docs
 /.github
 .gitignore
+/dist/**/*.js.map
+/dist/**/*.d.ts.map
 
 # testing and coverage
 jest.config.js

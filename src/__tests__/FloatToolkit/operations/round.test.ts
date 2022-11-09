@@ -19,8 +19,9 @@ it("should round the number to the specified precision", () => {
 });
 
 it("should throw an error for invalid arguments", () => {
-	// @ts-expect-error
+	// @ts-expect-error Argument for 'n' must be a number.
 	expect(() => ft.round("0.1" + 0.2)).toThrow(errorMessages.arguments.n);
-	// @ts-expect-error
+
+	// @ts-expect-error Argument for 'precision' must be an integer between 1 and 17.
 	expect(() => ft.round(0.1 + 0.2, "10")).toThrow(errorMessages.arguments.precision);
 });

@@ -3,7 +3,7 @@ import { isValidPrecision } from "../../eval/isValidPrecision";
 it("should only return true for a valid FloatToolkit.Precision value", () => {
 	expect(isValidPrecision(10)).toBe(true);
 
-	// @ts-expect-error
+	// @ts-expect-error undefined must also be tested
 	expect(isValidPrecision()).toBe(false);
 	expect(isValidPrecision("10")).toBe(false);
 	expect(isValidPrecision(NaN)).toBe(false);

@@ -264,15 +264,15 @@ namespace FloatToolkit {
 		},
 
 		get major() {
-			return versionNumbers[0];
+			return versionNumbers[0]!;
 		},
 
 		get minor() {
-			return versionNumbers[1];
+			return versionNumbers[1]!;
 		},
 
 		get patch() {
-			return versionNumbers[2];
+			return versionNumbers[2]!;
 		},
 	};
 }

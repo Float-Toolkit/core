@@ -19,7 +19,7 @@
 			"label": "Jest: Watch Mode",
 
 			"type": "npm",
-			"script": "testWatch",
+			"script": "test:watch",
 
 			"isBackground": true,
 			"group": "test"
@@ -41,30 +41,30 @@
 			"script": "build",
 
 			"isBackground": true,
-			"group": "build"
-		},
-
-		{
-			"label": "NPM: Generate documentation",
-
-			"type": "npm",
-			"script": "docs",
-
-			"isBackground": true,
-			"group": "build"
-		},
-
-		{
-			"label": "NPM: Build and generate documentation",
-
-			"type": "npm",
-			"script": "buildWithDocs",
-
-			"isBackground": true,
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+
+		{
+			"label": "NPM: Build package only",
+
+			"type": "npm",
+			"script": "build:package",
+
+			"isBackground": true,
+			"group": "build"
+		},
+
+		{
+			"label": "NPM: Build documentation only",
+
+			"type": "npm",
+			"script": "build:docs",
+
+			"isBackground": true,
+			"group": "build"
 		},
 
 		{

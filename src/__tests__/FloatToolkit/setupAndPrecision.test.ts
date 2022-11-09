@@ -31,13 +31,13 @@ describe("FloatToolkit.constructor", () => {
 	});
 
 	it("should throw an error for invalid arguments", () => {
-		// @ts-expect-error
+		// @ts-expect-error defaultPrecision must be an integer between 1 and 17.
 		expect(() => new FloatToolkit("12")).toThrow(errorMessages.defaultPrecision);
 
 		expect(
 			() =>
 				new FloatToolkit(10, {
-					// @ts-expect-error
+					// @ts-expect-error FloatToolkit does not support the option nonExistingOption.
 					nonExistingOption: "whatever",
 				})
 		).toThrow(errorMessages.options.nonExistingOption);
@@ -57,7 +57,7 @@ describe("FloatToolkit.defaultPrecision", () => {
 		expect(ft.defaultPrecision).toBe(5);
 
 		expect(() => {
-			// @ts-expect-error
+			// @ts-expect-error defaultPrecision must be an integer between 1 and 17.
 			ft.defaultPrecision = "5";
 		}).toThrow(errorMessages.defaultPrecision);
 	});

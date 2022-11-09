@@ -7,16 +7,19 @@
 		"useDefineForClassFields": true,
 
 		"module": "esnext",
-		"rootDir": "./src/",
 		"moduleResolution": "node",
 		"types": [],
+		"resolveJsonModule": true,
 
 		"declaration": true,
-		"outDir": "./dist/",
+		"declarationMap": true,
+		"sourceMap": true,
+		"importHelpers": true,
 		"stripInternal": true,
 		"noEmitOnError": true,
 		"declarationDir": "./typings/",
 
+		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 
@@ -31,9 +34,12 @@
 		"alwaysStrict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
+		"exactOptionalPropertyTypes": true,
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
 		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
 
 		"skipLibCheck": true
 	},

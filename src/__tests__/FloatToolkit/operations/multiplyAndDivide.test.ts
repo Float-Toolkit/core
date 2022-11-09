@@ -32,9 +32,10 @@ describe("FloatToolkit.multiply()", () => {
 	});
 
 	it("should throw errors for invalid arguments", () => {
-		// @ts-expect-error
+		// @ts-expect-error Argument for 'numbers' must be an array of numbers.
 		expect(() => ft.multiply(0.1 * 0.9)).toThrow(errorMessages.arguments.numbersArray.invalidType);
-		// @ts-expect-error
+
+		// @ts-expect-error Argument for 'precision' must be an integer between 1 and 17.
 		expect(() => ft.multiply([0.1, 0.9], "10")).toThrow(errorMessages.arguments.precision);
 	});
 });
@@ -57,9 +58,10 @@ describe("FloatToolkit.divide()", () => {
 	});
 
 	it("should throw errors for invalid arguments", () => {
-		// @ts-expect-error
+		// @ts-expect-error Argument for 'numbers' must be an array of numbers.
 		expect(() => ft.divide(0.09 * 0.9)).toThrow(errorMessages.arguments.numbersArray.invalidType);
-		// @ts-expect-error
+
+		// @ts-expect-error Argument for 'precision' must be an integer between 1 and 17.
 		expect(() => ft.divide([0.09, 0.9], "10")).toThrow(errorMessages.arguments.precision);
 	});
 });

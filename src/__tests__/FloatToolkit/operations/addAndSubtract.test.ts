@@ -33,9 +33,10 @@ describe("FloatToolkit.add()", () => {
 	});
 
 	it("should throw errors for invalid arguments", () => {
-		// @ts-expect-error
+		// @ts-expect-error Argument for 'numbers' must be an array of numbers.
 		expect(() => ft.add(0.1 + 0.2)).toThrow(errorMessages.arguments.numbersArray.invalidType);
-		// @ts-expect-error
+
+		// @ts-expect-error Argument for 'precision' must be an integer between 1 and 17.
 		expect(() => ft.add([0.1, 0.2], "10")).toThrow(errorMessages.arguments.precision);
 	});
 });
@@ -67,9 +68,10 @@ describe("FloatToolkit.subtract()", () => {
 	});
 
 	it("should throw errors for invalid arguments", () => {
-		// @ts-expect-error
+		// @ts-expect-error Argument for 'numbers' must be an array of numbers.
 		expect(() => ft.subtract(0.8 - 0.1 - 0.3)).toThrow(errorMessages.arguments.numbersArray.invalidType);
-		// @ts-expect-error
+
+		// @ts-expect-error Argument for 'precision' must be an integer between 1 and 17.
 		expect(() => ft.subtract([0.8, 0.1, 0.3], "10")).toThrow(errorMessages.arguments.precision);
 	});
 });

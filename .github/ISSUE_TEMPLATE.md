@@ -6,7 +6,9 @@
 
 ## Before you go ANY further...
 
--   Refer to the [documentation](https://float-toolkit.web.app) to make sure the error is actually a bug and not a mistake of your own.
--   Please help us process your issue efficiently and in detail by using one of our [issue templates](https://github.com/float-toolkit/core/issues/new/choose).
+-   Refer to the [documentation](https://float-toolkit.web.app) to make sure the error is actually a bug and not a mistake of your
+    own.
+-   Please help us process your issue efficiently and in detail by using one of our
+    [issue templates](https://github.com/float-toolkit/core/issues/new/choose).
 
 Thank you for contributing to the **Float Toolkit** codebase!

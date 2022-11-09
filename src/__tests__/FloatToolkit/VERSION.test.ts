@@ -1,4 +1,3 @@
-// @ts-ignore
 import PackageJSON from "../../../package.json";
 
 import FloatToolkit from "../..";

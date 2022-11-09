@@ -21,7 +21,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run buildWithDocs
+        run: npm run build
 
       - name: Upload dist artifact
         uses: actions/upload-artifact@v3

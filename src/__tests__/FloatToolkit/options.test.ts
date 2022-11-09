@@ -39,7 +39,7 @@ describe("FloatToolkit.setOptions()", () => {
 	});
 
 	it("should throw an error for an invalid option object", () => {
-		// @ts-expect-error
+		// @ts-expect-error Argument for 'options' must be an options object.
 		expect(() => ft.setOptions(["forceUseDefaultPrecision"])).toThrow(errorMessages.options.notAnObject);
 	});
 });
@@ -64,7 +64,7 @@ describe("FloatToolkit.resetOptions()", () => {
 	});
 
 	it("should throw an error for an invalid option object", () => {
-		// @ts-expect-error
+		// @ts-expect-error Argument for 'options' must be an options object.
 		expect(() => ft.resetOptions(["forceUseDefaultPrecision"])).toThrow(errorMessages.options.notAnObject);
 	});
 });
