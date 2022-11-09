@@ -1,7 +1,7 @@
-import FloatToolkit from "../index.js";
+import FloatToolkit from "../index";
 
-import { getMaxPrecision } from "../get-precision/getMaxPrecision.js";
-import { round } from "./round.js";
+import { getMaxPrecision } from "../get-precision/getMaxPrecision";
+import { round } from "./round";
 
 /**
  * @internal

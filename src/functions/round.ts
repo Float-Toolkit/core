@@ -1,9 +1,9 @@
-import FloatToolkit from "../index.js";
-import { precisionRange } from "../precisionRange.js";
+import FloatToolkit from "../index";
+import { precisionRange } from "../precisionRange";
 
-import { isNumber } from "../eval/isNumber.js";
-import { isValidPrecision } from "../eval/isValidPrecision.js";
-import { isLargeNumber } from "../eval/isLargeNumber.js";
+import { isNumber } from "../eval/isNumber";
+import { isValidPrecision } from "../eval/isValidPrecision";
+import { isLargeNumber } from "../eval/isLargeNumber";
 
 /**
  * @internal

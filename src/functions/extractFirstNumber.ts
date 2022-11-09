@@ -1,4 +1,4 @@
-import FloatToolkit from "../index.js";
+import FloatToolkit from "../index";
 
 /**
  * @internal

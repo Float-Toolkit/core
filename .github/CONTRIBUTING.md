@@ -17,5 +17,3 @@ If you wish to contribute to the **Float Toolkit** codebase, feel free to fork t
 1.  Run `npm run build` (or VSCode task _NPM: Build_) to run the tests and build the package and documentation (you can use
     `npm link` to try it locally).
 1.  [Submit a pull request](https://github.com/float-toolkit/core/compare).
-
-**IMPORTANT: Every `import` statement in source code files (not test files) must include a `.js` file extension.**

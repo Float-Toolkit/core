@@ -1,6 +1,6 @@
-import FloatToolkit from "../index.js";
+import FloatToolkit from "../index";
 
-import { isLargeNumber } from "../eval/isLargeNumber.js";
+import { isLargeNumber } from "../eval/isLargeNumber";
 
 /**
  * @internal
