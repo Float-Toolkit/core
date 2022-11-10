@@ -11,13 +11,10 @@
 		"types": [],
 		"resolveJsonModule": true,
 
-		"declaration": true,
-		"declarationMap": true,
 		"sourceMap": true,
 		"importHelpers": true,
 		"stripInternal": true,
 		"noEmitOnError": true,
-		"declarationDir": "./typings/",
 
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,

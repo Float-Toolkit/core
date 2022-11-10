@@ -58,6 +58,7 @@ await build({
 	platform: "neutral",
 	target: "es6",
 	format: "esm",
+	external: ["./package.json"],
 
 	outfile: "./dist/index.js",
 	banner: {
@@ -69,7 +70,7 @@ await build({
 
 	plugins: [
 		dTSPathAliasPlugin({
-			tsconfigPath: "./tsconfig.json",
+			tsconfigPath: "/tsconfig.typings.json",
 			outputPath: declarationDir,
 		}),
 	],
