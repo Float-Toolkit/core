@@ -40,7 +40,6 @@
 	"homepage": "https://float-toolkit.web.app/",
 	"devDependencies": {
 		"@types/eslint": "^8.4.10",
-		"@types/eslint-plugin-prettier": "^3.1.0",
 		"@types/jest": "^29.2.2",
 		"@types/node": "^18.11.9",
 		"@typescript-eslint/eslint-plugin": "^5.42.1",

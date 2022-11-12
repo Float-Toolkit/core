@@ -3,14 +3,10 @@
 		"aaron-bond.better-comments",
 		"editorconfig.editorconfig",
 		"dbaeumer.vscode-eslint",
-		"github.vscode-pull-request-github",
 		"eamodio.gitlens",
 		"orta.vscode-jest",
-		"idered.npm",
 		"esbenp.prettier-vscode",
-		"streetsidesoftware.code-spell-checker",
 		"jock.svg",
-		"luisferlcc.vscode-rimraf",
 		"redhat.vscode-yaml"
 	]
 }

@@ -22,7 +22,7 @@ module.exports = {
 		ecmaVersion: "latest",
 	},
 	ignorePatterns: ["/dist/**/*", "/typings/**/*", "/docs/**/*", "/coverage/**/*"],
-	plugins: ["@typescript-eslint", "import"],
+	plugins: ["@typescript-eslint", "import", "prettier"],
 
 	rules: {
 		"@typescript-eslint/explicit-function-return-type": "error",

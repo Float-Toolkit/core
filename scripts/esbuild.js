@@ -1,7 +1,7 @@
 // @ts-check
 
 import { readdir, readFile, rm } from "fs/promises";
-import { resolve } from "path";
+import { resolve, sep } from "path";
 
 import { build } from "esbuild";
 import { dTSPathAliasPlugin } from "esbuild-plugin-d-ts-path-alias";
@@ -67,10 +67,11 @@ await build({
 	bundle: true,
 	treeShaking: true,
 	sourcemap: true,
+	sourcesContent: false,
 
 	plugins: [
 		dTSPathAliasPlugin({
-			tsconfigPath: "/tsconfig.typings.json",
+			tsconfigPath: `${process.cwd()}${sep}tsconfig.typings.json`,
 			outputPath: declarationDir,
 		}),
 	],
