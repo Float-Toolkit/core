@@ -1,8 +1,9 @@
 import FloatToolkit from "../../..";
 
-import { errorMessages } from "../../__mocks__/errorMessages";
+import errorMessages from "../../__mocks__/errorMessages";
 
 let ft: FloatToolkit;
+
 beforeEach(() => {
 	ft = new FloatToolkit();
 });
@@ -24,6 +25,7 @@ describe("FloatToolkit.multiply()", () => {
 		ft.setOptions({
 			forceUseDefaultPrecision: true,
 		});
+
 		expect(ft.multiply([0.1, 0.9])).toBe(0.09000000000000001);
 	});
 

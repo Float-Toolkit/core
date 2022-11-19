@@ -1,11 +1,12 @@
 import FloatToolkit from "../..";
 
-import { defaultOptions } from "../../defaultOptions";
-import { validateOptions } from "../../eval/validateOptions";
+import defaultOptions from "../../defaultOptions";
+import validateOptions from "../../eval/validateOptions";
 
-import { errorMessages } from "../__mocks__/errorMessages";
+import errorMessages from "../__mocks__/errorMessages";
 
 let ft: FloatToolkit;
+
 beforeEach(() => {
 	ft = new FloatToolkit();
 });
@@ -23,6 +24,7 @@ describe("FloatToolkit.setOptions()", () => {
 
 	beforeEach(() => {
 		prevOptions = ft.options;
+
 		returnedOptions = ft.setOptions({
 			forceUseDefaultPrecision: true,
 		});

@@ -1,12 +1,12 @@
 import FloatToolkit from "../index";
-import { precisionRange } from "../precisionRange";
+import { precisionRange } from "../Precision";
 
-import { getPrecision } from "./getPrecision";
+import getPrecision from "./getPrecision";
 
 /**
  * @internal
  */
-export function precisionsSum(n1: number, n2: number): FloatToolkit.Precision {
+export default function precisionsSum(n1: number, n2: number): FloatToolkit.Precision {
 	const n1Precision = getPrecision(n1);
 	const n2Precision = getPrecision(n2);
 

@@ -1,12 +1,14 @@
 // @ts-check
 
-import { readdir, readFile, rm } from "fs/promises";
+import { readFileSync } from "fs";
+import { readdir, rm } from "fs/promises";
 import { resolve, sep } from "path";
 
 import { build } from "esbuild";
 import { dTSPathAliasPlugin } from "esbuild-plugin-d-ts-path-alias";
 
 const declarationDir = "./typings/";
+
 const banner = `/**
  * Float Toolkit
  * NPM package by LuisFerLCC
@@ -36,6 +38,7 @@ const isDir = path => !isDeclarationFile(path) && !isSourceMap(path);
  */
 async function allDeclarationFilesInDir(path) {
 	const files = (await readdir(path)).map(filename => resolve(path, filename));
+
 	await Promise.all(
 		files.filter(filename => isDir(filename)).map(async filename => files.push(...(await allDeclarationFilesInDir(filename))))
 	);
@@ -82,7 +85,7 @@ const typingsSubdirs = await allSubdirs(declarationDir);
 
 await Promise.all(
 	declarationFiles.map(async file => {
-		if (!(await readFile(file)).toString().startsWith("export {};")) return;
+		if (!["export {}", "export default"].some(value => readFileSync(file).toString().startsWith(value))) return;
 
 		await rm(file);
 		return rm(`${file}.map`);

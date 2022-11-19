@@ -1,4 +1,6 @@
 /**
  * @internal
  */
-export const isNumber = (n: any): boolean => typeof n === "number";
+const isNumber = (n: any): boolean => typeof n === "number";
+
+export default isNumber;

@@ -1,11 +1,11 @@
 import FloatToolkit from "../index";
 
-import { isLargeNumber } from "../eval/isLargeNumber";
+import isLargeNumber from "../eval/isLargeNumber";
 
 /**
  * @internal
  */
-export function getPrecision(n: number): FloatToolkit.Precision {
+export default function getPrecision(n: number): FloatToolkit.Precision {
 	const nString = n.toString();
 
 	const pointPosition = nString.indexOf(".") + 1;

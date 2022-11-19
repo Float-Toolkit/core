@@ -1,11 +1,11 @@
 import FloatToolkit from "../index";
 
-import { getPrecision } from "./getPrecision";
+import getPrecision from "./getPrecision";
 
 /**
  * @internal
  */
-export function getMaxPrecision(n1: number, n2: number): FloatToolkit.Precision {
+export default function getMaxPrecision(n1: number, n2: number): FloatToolkit.Precision {
 	const n1Precision = getPrecision(n1);
 	const n2Precision = getPrecision(n2);
 

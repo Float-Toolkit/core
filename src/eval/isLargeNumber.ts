@@ -1,4 +1,6 @@
 /**
  * @internal
  */
-export const isLargeNumber = (n: number): boolean => n.toString().includes("e");
+const isLargeNumber = (n: number): boolean => n.toString().includes("e");
+
+export default isLargeNumber;

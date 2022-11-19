@@ -1,13 +1,15 @@
-import { precisionRange } from "../precisionRange";
+import { precisionRange } from "../Precision";
 
-import { isNumber } from "./isNumber";
+import isNumber from "./isNumber";
 
 /**
  * @internal
  */
-export const isValidPrecision = (precision: any): boolean =>
+const isValidPrecision = (precision: any): boolean =>
 	isNumber(precision) &&
 	!isNaN(precision) &&
 	precision % 1 === 0 &&
 	precision >= precisionRange.min &&
-	precision < precisionRange.max;
+	precision <= precisionRange.max;
+
+export default isValidPrecision;

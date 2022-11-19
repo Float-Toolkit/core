@@ -1,6 +1,6 @@
-import { validateNumbersArray } from "../../eval/validateNumbersArray";
+import validateNumbersArray from "../../eval/validateNumbersArray";
 
-import { errorMessages } from "../__mocks__/errorMessages";
+import errorMessages from "../__mocks__/errorMessages";
 
 it("should accept an array of numbers and throw an error for anything else", () => {
 	expect(() => validateNumbersArray([1, 2, 3])).not.toThrow();

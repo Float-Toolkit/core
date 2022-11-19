@@ -12,10 +12,7 @@ const config = {
 	testEnvironment: "node",
 
 	globals: {
-		"ts-jest": {
-			tsconfig: "tsconfig.test.json",
-			useESM: true,
-		},
+		"ts-jest": { tsconfig: "<rootDir>/tsconfig.test.json", useESM: true },
 	},
 };
 

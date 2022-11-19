@@ -1,6 +1,6 @@
-import { precisionRange } from "../../precisionRange";
+import { precisionRange } from "../../Precision";
 
-import { precisionsSum } from "../../get-precision/precisionsSum";
+import precisionsSum from "../../get-precision/precisionsSum";
 
 describe("precisionsSum", () => {
 	it("should return the sum of the two numbers' precisions", () => {
@@ -8,6 +8,7 @@ describe("precisionsSum", () => {
 	});
 
 	it("should not return anything greater than the maximum precision", () => {
-		expect(precisionsSum(0.123456789012345, 0.123456789012345)).toBeLessThanOrEqual(precisionRange.max);
+		// eslint-disable-next-line
+		expect(precisionsSum(0.1234567890123456789, 0.1234567890123456789)).toBeLessThanOrEqual(precisionRange.max);
 	});
 });

@@ -1,4 +1,4 @@
-export const errorMessages = {
+const errorMessages = {
 	defaultPrecision: /defaultPrecision must be an integer between \d+ and \d+\./,
 
 	options: {
@@ -19,3 +19,5 @@ export const errorMessages = {
 		precision: /Argument for 'precision' must be an integer between \d+ and \d+\./,
 	},
 };
+
+export default errorMessages;

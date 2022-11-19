@@ -1,5 +1,5 @@
 import FloatToolkit from "../../..";
-import { errorMessages } from "../../__mocks__/errorMessages";
+import errorMessages from "../../__mocks__/errorMessages";
 
 let ft: FloatToolkit;
 

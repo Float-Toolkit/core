@@ -1,4 +1,6 @@
 /**
  * @internal
  */
-export const isNumbersArray = (numbers: any): boolean => numbers instanceof Array && numbers.every(n => typeof n === "number");
+const isNumbersArray = (numbers: any): boolean => numbers instanceof Array && numbers.every(n => typeof n === "number");
+
+export default isNumbersArray;

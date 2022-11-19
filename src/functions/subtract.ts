@@ -1,13 +1,13 @@
 import FloatToolkit from "../index";
 
-import { validateNumbersArray } from "../eval/validateNumbersArray";
-import { extractFirstNumber } from "./extractFirstNumber";
-import { addArrayItem } from "./addArrayItem";
+import validateNumbersArray from "../eval/validateNumbersArray";
+import extractFirstNumber from "./extractFirstNumber";
+import addArrayItem from "./addArrayItem";
 
 /**
  * @internal
  */
-export function subtract(numbers: number[], precision?: FloatToolkit.Precision): number {
+export default function subtract(numbers: number[], precision?: FloatToolkit.Precision): number {
 	validateNumbersArray(numbers);
 
 	const [firstNumber, newNumbers] = extractFirstNumber(numbers);

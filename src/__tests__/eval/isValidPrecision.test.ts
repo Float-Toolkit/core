@@ -1,4 +1,4 @@
-import { isValidPrecision } from "../../eval/isValidPrecision";
+import isValidPrecision from "../../eval/isValidPrecision";
 
 it("should only return true for a valid FloatToolkit.Precision value", () => {
 	expect(isValidPrecision(10)).toBe(true);

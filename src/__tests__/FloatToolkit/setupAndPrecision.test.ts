@@ -1,11 +1,12 @@
 import FloatToolkit from "../..";
 
-import { defaultOptions } from "../../defaultOptions";
-import { isValidPrecision } from "../../eval/isValidPrecision";
+import defaultOptions from "../../defaultOptions";
+import isValidPrecision from "../../eval/isValidPrecision";
 
-import { errorMessages } from "../__mocks__/errorMessages";
+import errorMessages from "../__mocks__/errorMessages";
 
 let ft: FloatToolkit;
+
 beforeEach(() => {
 	ft = new FloatToolkit();
 });
@@ -20,6 +21,7 @@ describe("FloatToolkit.constructor", () => {
 
 	it("should create an instance with custom options", () => {
 		const precision = 5;
+
 		const options: FloatToolkit.Options = {
 			forceUseDefaultPrecision: true,
 		};
@@ -54,6 +56,7 @@ describe("FloatToolkit.defaultPrecision", () => {
 		expect(() => {
 			ft.defaultPrecision = 5;
 		}).not.toThrow();
+
 		expect(ft.defaultPrecision).toBe(5);
 
 		expect(() => {

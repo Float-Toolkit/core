@@ -1,17 +1,17 @@
 import PackageJSON from "../package.json";
 
-import { precisionRange } from "./precisionRange";
-import { defaultOptions } from "./defaultOptions";
-import { versionNumbers } from "./versionNumbers";
+import { _Precision, precisionRange } from "./Precision";
+import defaultOptions from "./defaultOptions";
+import versionNumbers from "./versionNumbers";
 
-import { isValidPrecision } from "./eval/isValidPrecision";
-import { validateOptions } from "./eval/validateOptions";
+import isValidPrecision from "./eval/isValidPrecision";
+import validateOptions from "./eval/validateOptions";
 
-import { round } from "./functions/round";
-import { add } from "./functions/add";
-import { subtract } from "./functions/subtract";
-import { multiply } from "./functions/multiply";
-import { divide } from "./functions/divide";
+import round from "./functions/round";
+import add from "./functions/add";
+import subtract from "./functions/subtract";
+import multiply from "./functions/multiply";
+import divide from "./functions/divide";
 
 /**
  * A FloatToolkit contains methods to round floats and perform accurate math operations with them.
@@ -51,7 +51,7 @@ class FloatToolkit {
 
 	set defaultPrecision(precision: FloatToolkit.Precision) {
 		if (!isValidPrecision(precision))
-			throw new TypeError(`defaultPrecision must be an integer between ${precisionRange.min} and ${precisionRange.max - 1}.`);
+			throw new TypeError(`defaultPrecision must be an integer between ${precisionRange.min} and ${precisionRange.max}.`);
 
 		this.#precision = precision;
 	}
@@ -191,25 +191,10 @@ class FloatToolkit {
 }
 
 namespace FloatToolkit {
-	type PrependNextNum<A extends Array<unknown>> = A["length"] extends infer T
-		? ((t: T, ...a: A) => void) extends (...x: infer X) => void
-			? X
-			: never
-		: never;
-
-	type EnumerateInternal<A extends Array<unknown>, N extends number> = {
-		0: A;
-		1: EnumerateInternal<PrependNextNum<A>, N>;
-	}[N extends A["length"] ? 0 : 1];
-
-	type Enumerate<N extends number> = EnumerateInternal<[], N> extends (infer E)[] ? E : never;
-
-	type IntegerRange<FROM extends number, TO extends number> = Exclude<Enumerate<TO>, Enumerate<FROM>>;
-
 	/**
 	 * An integer between 1 and 17, which can be used as a FloatToolkit's default precision.
 	 */
-	export type Precision = IntegerRange<1, 18>;
+	export type Precision = _Precision;
 
 	/**
 	 * Options that can be set to a FloatToolkit to modify its behavior.
