@@ -1,7 +1,6 @@
 // @ts-check
 
-import { readFileSync } from "fs";
-import { readdir, rm } from "fs/promises";
+import { readdir, readFile, rm } from "fs/promises";
 import { resolve, sep } from "path";
 
 import { build } from "esbuild";
@@ -85,7 +84,7 @@ const typingsSubdirs = await allSubdirs(declarationDir);
 
 await Promise.all(
 	declarationFiles.map(async file => {
-		if (!["export {}", "export default"].some(value => readFileSync(file).toString().startsWith(value))) return;
+		if (!(await readFile(file)).toString().match(/^export ({}|default (?!function|abstract|class|interface)\w+)/)) return;
 
 		await rm(file);
 		return rm(`${file}.map`);
