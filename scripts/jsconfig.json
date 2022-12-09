@@ -5,6 +5,6 @@
 		"target": "esnext"
 	},
 
-	"include": ["./**/*.js"],
+	"include": ["./**/*.mjs"],
 	"exclude": []
 }

@@ -3,12 +3,9 @@
 
 	"compilerOptions": {
 		"types": ["node", "jest"],
-		"resolveJsonModule": true,
-
-		"declaration": false,
-		"declarationDir": null
+		"resolveJsonModule": true
 	},
 
-	"include": ["./src/__tests__/**/*.ts", "./package.json"],
+	"include": ["./src/**/*.test.ts", "./package.json"],
 	"exclude": []
 }

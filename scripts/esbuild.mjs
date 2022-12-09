@@ -55,29 +55,37 @@ async function allSubdirs(path) {
 	return dirs.filter(dir => isDir(dir));
 }
 
-await build({
-	entryPoints: ["./src/index.ts"],
-	platform: "neutral",
-	target: "es6",
-	format: "esm",
-	external: ["./package.json"],
+/**
+ * @type {import("esbuild").Format[]}
+ */
+const formats = ["cjs", "esm"];
 
-	outfile: "./dist/index.js",
-	banner: {
-		js: banner,
-	},
-	bundle: true,
-	treeShaking: true,
-	sourcemap: true,
-	sourcesContent: false,
+await Promise.all(
+	formats.map(format =>
+		build({
+			entryPoints: ["./src/index.ts"],
+			platform: "neutral",
+			target: "es6",
+			format,
 
-	plugins: [
-		dTSPathAliasPlugin({
-			tsconfigPath: `${process.cwd()}${sep}tsconfig.typings.json`,
-			outputPath: declarationDir,
-		}),
-	],
-});
+			outfile: `./dist/index.${format === "esm" ? "m" : ""}js`,
+			banner: {
+				js: banner,
+			},
+			bundle: true,
+			treeShaking: true,
+			sourcemap: true,
+			sourcesContent: false,
+
+			plugins: [
+				dTSPathAliasPlugin({
+					tsconfigPath: `${process.cwd()}${sep}tsconfig.typings.json`,
+					outputPath: declarationDir,
+				}),
+			],
+		})
+	)
+);
 
 const declarationFiles = await allDeclarationFilesInDir(declarationDir);
 const typingsSubdirs = await allSubdirs(declarationDir);

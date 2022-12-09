@@ -149,7 +149,7 @@ module.exports = {
 
 	overrides: [
 		{
-			files: ["./src/__tests__/**/*.ts", "./.eslintrc.cjs", "./jest.config.js", "./scripts/**/*.js"],
+			files: ["./src/__tests__/**/*.ts", "./.eslintrc.js", "./jest.config.js", "./scripts/**/*.mjs"],
 
 			env: {
 				es6: true,
@@ -158,7 +158,7 @@ module.exports = {
 		},
 
 		{
-			files: ["./.eslintrc.cjs", "./scripts/**/*.js"],
+			files: ["./.eslintrc.js", "./scripts/**/*.mjs"],
 
 			rules: {
 				"@typescript-eslint/explicit-function-return-type": "off",

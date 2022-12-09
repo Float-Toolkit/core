@@ -8,6 +8,7 @@
 /.github
 .gitignore
 /dist/**/*.js.map
+/dist/**/*.mjs.map
 /dist/**/*.d.ts.map
 
 # testing and coverage
@@ -29,7 +30,7 @@ node_modules.bun
 *.sublime-workspace
 /.vscode
 .editorconfig
-.eslintrc.cjs
+.eslintrc.js
 .prettierrc
 .prettierignore
 tsconfig*.json

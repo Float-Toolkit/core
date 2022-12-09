@@ -42,7 +42,7 @@
 	},
 
 	"include": ["./src/**/*.ts"],
-	"exclude": ["./src/__tests__/**/*.ts"],
+	"exclude": ["./src/**/*.test.ts"],
 
 	"typedocOptions": {
 		"entryPoints": ["./src/index.ts"],
