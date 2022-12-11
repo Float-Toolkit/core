@@ -34,6 +34,7 @@ node_modules.bun
 .prettierrc
 .prettierignore
 tsconfig*.json
+jsconfig*.json
 **/tsconfig*.tsbuildinfo
 **/jsconfig*.tsbuildinfo
 
