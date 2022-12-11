@@ -7,5 +7,6 @@
 	},
 
 	"include": ["./src/**/*.test.ts", "./package.json"],
-	"exclude": []
+	"exclude": [],
+	"references": [{ "path": "./tsconfig.json" }]
 }

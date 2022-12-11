@@ -1,5 +1,3 @@
-// @ts-check
-
 import { readdir, readFile, rm } from "fs/promises";
 import { resolve, sep } from "path";
 
@@ -79,7 +77,7 @@ await Promise.all(
 
 			plugins: [
 				dTSPathAliasPlugin({
-					tsconfigPath: `${process.cwd()}${sep}tsconfig.typings.json`,
+					tsconfigPath: `${process.cwd()}${sep}tsconfig.lib.json`,
 					outputPath: declarationDir,
 				}),
 			],

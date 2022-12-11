@@ -9,5 +9,5 @@
 		"noEmitOnError": false
 	},
 
-	"exclude": ["./src/__tests__/**/*.ts"]
+	"references": []
 }

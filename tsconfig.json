@@ -1,5 +1,7 @@
 {
 	"compilerOptions": {
+		"composite": true,
+
 		"target": "es6",
 		"lib": ["esnext"],
 		"experimentalDecorators": true,
@@ -43,6 +45,7 @@
 
 	"include": ["./src/**/*.ts"],
 	"exclude": ["./src/**/*.test.ts"],
+	"references": [{ "path": "./tsconfig.test.json" }, { "path": "./jsconfig.json" }],
 
 	"typedocOptions": {
 		"entryPoints": ["./src/index.ts"],

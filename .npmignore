@@ -9,7 +9,7 @@
 .gitignore
 /dist/**/*.js.map
 /dist/**/*.mjs.map
-/dist/**/*.d.ts.map
+/typings/**/*.d.ts.map
 
 # testing and coverage
 jest.config.js
@@ -34,6 +34,8 @@ node_modules.bun
 .prettierrc
 .prettierignore
 tsconfig*.json
+**/tsconfig*.tsbuildinfo
+**/jsconfig*.tsbuildinfo
 
 # Firebase
 .firebase
