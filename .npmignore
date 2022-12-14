@@ -11,6 +11,9 @@
 /dist/**/*.mjs.map
 /typings/**/*.d.ts.map
 
+# production
+*.tgz
+
 # testing and coverage
 jest.config.js
 /coverage

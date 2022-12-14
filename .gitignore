@@ -5,6 +5,7 @@
 /dist
 /typings
 /docs
+*.tgz
 
 # testing and coverage
 /coverage
