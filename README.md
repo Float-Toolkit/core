@@ -61,8 +61,6 @@ console.log(ft.add([0.1, 0.2])); // 0.3
 Float Toolkit is written in [TypeScript](https://typescriptlang.org). As such, you will have full type checking in your TypeScript
 projects. The `FloatToolkit` class also serves as a namespace containing the type definitions used by the package.
 
-#### Example:
-
 ```ts
 import FloatToolkit from "@float-toolkit/core";
 
