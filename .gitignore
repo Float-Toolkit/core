@@ -23,6 +23,7 @@ node_modules.bun
 *.launch
 .settings/
 *.sublime-workspace
+.DS_Store
 **/tsconfig*.tsbuildinfo
 **/jsconfig*.tsbuildinfo
 

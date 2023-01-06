@@ -1,4 +1,4 @@
-import FloatToolkit from "../index";
+import { OptionLabel } from "../index";
 import defaultOptions from "../defaultOptions";
 
 import FloatToolkitError from "../errors/FloatToolkitError";
@@ -19,8 +19,8 @@ export default function validateOptions(options: any, checkFullObject?: boolean)
 	Object.keys(options).forEach(key => {
 		if (!(key in defaultOptions)) throw new FloatToolkitError(`FloatToolkit does not support the option ${key}.`);
 
-		const optionType = typeof options[key as FloatToolkit.OptionLabel];
-		const expectedType = typeof defaultOptions[key as FloatToolkit.OptionLabel];
+		const optionType = typeof options[key as OptionLabel];
+		const expectedType = typeof defaultOptions[key as OptionLabel];
 
 		if (optionType !== expectedType) throw new FloatToolkitError(`${key} must be a property of type '${expectedType}'.`);
 	});

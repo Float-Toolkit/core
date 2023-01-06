@@ -263,4 +263,4 @@ namespace FloatToolkit {
 	};
 }
 
-export default FloatToolkit;
+export = FloatToolkit;

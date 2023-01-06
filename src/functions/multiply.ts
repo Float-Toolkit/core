@@ -1,4 +1,4 @@
-import FloatToolkit from "../index";
+import { Precision } from "../index";
 
 import validateNumbersArray from "../eval/validateNumbersArray";
 import extractFirstNumber from "./extractFirstNumber";
@@ -7,7 +7,7 @@ import multiplyArrayItem from "./multiplyArrayItem";
 /**
  * @internal
  */
-export default function multiply(numbers: number[], precision?: FloatToolkit.Precision): number {
+export default function multiply(numbers: number[], precision?: Precision): number {
 	validateNumbersArray(numbers);
 
 	const [firstNumber, newNumbers] = extractFirstNumber(numbers);

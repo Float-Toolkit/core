@@ -1,4 +1,4 @@
-import FloatToolkit from "../index";
+import { Precision } from "../index";
 import { precisionRange } from "../Precision";
 
 import isNumber from "../eval/isNumber";
@@ -8,7 +8,7 @@ import isLargeNumber from "../eval/isLargeNumber";
 /**
  * @internal
  */
-export default function round(n?: number, precision?: FloatToolkit.Precision): number {
+export default function round(n?: number, precision?: Precision): number {
 	if (!isNumber(n)) throw new TypeError("Argument for 'n' must be a number.");
 	if (!isValidPrecision(precision))
 		throw new RangeError(`Argument for 'precision' must be an integer between ${precisionRange.min} and ${precisionRange.max}.`);

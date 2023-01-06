@@ -1,4 +1,4 @@
-import FloatToolkit from "../..";
+import FloatToolkit, { Options } from "../..";
 
 import defaultOptions from "../../defaultOptions";
 import isValidPrecision from "../../eval/isValidPrecision";
@@ -22,14 +22,14 @@ describe("FloatToolkit.constructor", () => {
 	it("should create an instance with custom options", () => {
 		const precision = 5;
 
-		const options: FloatToolkit.Options = {
+		const options: Options = {
 			forceUseDefaultPrecision: true,
 		};
 
 		ft = new FloatToolkit(precision, options);
 
 		expect(ft.defaultPrecision).toBe(precision);
-		expect(ft.options).toEqual<FloatToolkit.Options>({ ...defaultOptions, ...options });
+		expect(ft.options).toEqual<Options>({ ...defaultOptions, ...options });
 	});
 
 	it("should throw an error for invalid arguments", () => {

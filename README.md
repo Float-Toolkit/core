@@ -8,7 +8,7 @@
 
 [![NPM latest version](https://img.shields.io/npm/v/@float-toolkit/core?label=version&logo=npm)](https://npmjs.com/package/@float-toolkit/core)
 [![NPM downloads](https://img.shields.io/npm/dt/@float-toolkit/core?logo=npm)](https://npmjs.com/package/@float-toolkit/core)
-[![Tests status](https://img.shields.io/github/workflow/status/float-toolkit/core/Test%20with%20Jest?label=tests&logo=jest)](https://github.com/float-toolkit/core/actions/workflows/testWithJest.yml)
+[![Tests status](https://img.shields.io/github/actions/workflow/status/float-toolkit/core/testWithJest.yml?branch=master&label=tests&logo=jest)](https://github.com/float-toolkit/core/actions/workflows/testWithJest.yml)
 [![Code coverage with Codecov](https://img.shields.io/codecov/c/github/float-toolkit/core/tests?logo=codecov&logoColor=white)](https://codecov.io/gh/float-toolkit/core)
 [![Contributor Covenant Code of Conduct](https://img.shields.io/badge/Contributor%20Covenant-2.1-5e0d73)](https://github.com/float-toolkit/core/blob/master/.github/CODE_OF_CONDUCT.md)
 
@@ -59,7 +59,7 @@ console.log(ft.add([0.1, 0.2])); // 0.3
 </div>
 
 Float Toolkit is written in [TypeScript](https://typescriptlang.org). As such, you will have full type checking in your TypeScript
-projects. The `FloatToolkit` class also serves as a namespace containing the type definitions used by the package.
+projects. The type definitions used by the package are exported on their own or through the `FloatToolkit` namespace.
 
 ```ts
 import FloatToolkit from "@float-toolkit/core";
@@ -118,6 +118,7 @@ Need help using Float Toolkit? Don't hesitate to reach out on
 ## Child packages
 
 -   [Float Toolkit for React](https://npmjs.com/package/@float-toolkit/react)
+-   [Float Toolkit for Angular](https://npmjs.com/package/@float-toolkit/angular)
 
 ## Contributing
 

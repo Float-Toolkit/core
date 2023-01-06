@@ -8,7 +8,7 @@
 		"emitDecoratorMetadata": true,
 		"useDefineForClassFields": true,
 
-		"module": "esnext",
+		"module": "commonjs",
 		"moduleResolution": "node",
 		"types": [],
 		"resolveJsonModule": true,
@@ -43,8 +43,8 @@
 		"skipLibCheck": true
 	},
 
-	"include": ["./src/**/*.ts"],
-	"exclude": ["./src/**/*.test.ts"],
+	"include": ["./src/**/*.ts", "./package.json"],
+	"exclude": ["./src/__tests__/**/*.test.ts"],
 	"references": [{ "path": "./tsconfig.test.json" }, { "path": "./jsconfig.json" }],
 
 	"typedocOptions": {

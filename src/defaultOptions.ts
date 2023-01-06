@@ -1,9 +1,9 @@
-import FloatToolkit from "./index";
+import { Options } from "./index";
 
 /**
  * @internal
  */
-const defaultOptions: FloatToolkit.Options = {
+const defaultOptions: Options = {
 	forceUseDefaultPrecision: false,
 };
 

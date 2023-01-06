@@ -26,6 +26,7 @@ body:
       options:
         - "@float-toolkit/core"
         - "@float-toolkit/react"
+        - "@float-toolkit/angular"
 
   - type: textarea
     id: description
