@@ -19,7 +19,7 @@
 		"test": "jest",
 		"test:watch": "npm run pretest && jest --watch",
 		"pretest": "rm -rf coverage && npm run format",
-		"format": "prettier --write . && eslint --ext .js,.ts --fix ."
+		"format": "prettier --write . && eslint --ext .js,.mjs,.ts --fix ."
 	},
 	"repository": {
 		"type": "git",
